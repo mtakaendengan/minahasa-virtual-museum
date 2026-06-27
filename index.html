@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Minahasa Digital Museum: Experience the rich history and culture of Minahasa through an immersive virtual museum. Explore artifacts, artworks, and historical narratives in a 3D environment.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Virtual Museum of Minahasa History</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Museum Logo -->
+
+        <div id="logo">
+            <span class="logo-text">MINAHASA</span>
+            <span class="logo-subtitle">DIGITAL MUSEUM</span>
+        </div>
+
+        <!-- Navigation Controls -->
+
+        <div id="navigation-controls">
+            <div class="control-group">
+                <h4>Navigasi</h4>
+                <div class="key-hints">
+                    <span class="key" data-key="w">W</span>
+                    <span class="key" data-key="a">A</span>
+                    <span class="key" data-key="s">S</span>
+                    <span class="key" data-key="d">D</span>
+                    <span>Arah</span>
+                </div>
+                <div class="key-hints">
+                    <span class="key">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L12 22M12 2L8 6M12 2L16 6M12 22L8 18M12 22L16 18" />
+                        </svg>
+                    </span>
+                    <span>Mirar</span>
+                </div>
+                <div class="key-hints">
+                    <span class="key" data-key="shift">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 5L12 19M12 5L7 10M12 5L17 10" />
+                        </svg>
+                    </span>
+                    <span>Correr</span>
+                </div>
+                <div class="key-hints"
+                    style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <span style="font-size: 11px; opacity: 0.6;">FPS:</span>
+                    <span id="fps-counter" style="font-weight: 600; color: #4ade80;">60</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Three.js Canvas -->
+
+        <div id="canvas-container"></div>
+
+        <!-- Navigation Crosshair -->
+
+        <div id="crosshair"></div>
+
+        <!-- Video Modal -->
+
+        <div id="video-modal" class="modal">
+            <div class="modal-content">
+                <button id="close-modal" class="close-btn">&times;</button>
+
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader">
+            <div class="loader-content">
+                <div class="loader-spinner"></div>
+                <p>Cargando experiencia...</p>
+            </div>
+        </div>
+
+        <!-- Ambient Audio -->
+
+        <audio id="ambient-audio" loop>
+            <source src="src/assets/audio/ambient_sound.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Credits Modal -->
+        <div id="credits-modal" class="modal credits-modal">
+            <div class="modal-content credits-content">
+                <button id="close-credits" class="close-btn" type="button" data-ui-interactive="true">&times;</button>
+                <div class="credits-body">
+                    <div class="credits-header">
+                        <span class="credits-kicker">Museo Virtual Byron Gálvez</span>
+                        <h2>Créditos</h2>
+                        <p>
+                            Una experiencia digital que integra código, luz, sonido e interacción para recorrer el
+                            universo pictórico de Byron Gálvez.
+                        </p>
+                    </div>
+
+                    <section class="credits-section credits-section--developer">
+                        <img class="credits-profile" src="./src/assets/credits/jose.png" alt="José Manuel Cortés Cerón" loading="lazy">
+                        <div>
+                            <h3>Museografía digital y desarrollo 3D</h3>
+                            <p class="credits-name">José Manuel Cortés Cerón</p>
+                            <p class="credits-role">ICT Engineering Student · Software &amp; AI Developer</p>
+                            <a class="credits-social" href="https://www.instagram.com/deepdevjose" target="_blank" rel="noopener noreferrer">@deepdevjose</a>
+                            <p>
+                                Diseño y desarrollo de la experiencia virtual: sala 3D, navegación inmersiva,
+                                iluminación, recorrido guiado, interacción con obras, reproducción multimedia y
+                                optimización de rendimiento.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="credits-section">
+                        <h3>Obra artística original</h3>
+                        <p class="credits-name">Byron Gálvez</p>
+                        <p>Uso de obra con fines educativos, culturales y de difusión digital.</p>
+                    </section>
+
+                    <section class="credits-section">
+                        <h3>Tecnologías</h3>
+                        <p class="credits-tech-list" aria-label="Tecnologías utilizadas">Three.js · WebGL · JavaScript · HTML · CSS · Cloudinary</p>
+                    </section>
+
+                    <p class="credits-legal">
+                        Las obras visuales presentadas fueron integradas con autorización para fines educativos,
+                        culturales y de difusión digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js and Controls -->
+
+    <!-- Three.js Import Map -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <!-- Main Module Entry -->
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
