@@ -2536,3 +2536,334 @@ body.guided-tour-active #logo {
         height: 76px;
     }
 }
+
+/* ===========================================================================
+   Mobile Landscape + Virtual Joystick Patch
+   ---------------------------------------------------------------------------
+   Uses a real analog joystick again, requests landscape mode from JavaScript,
+   and keeps the phone UI compact in landscape orientation.
+   =========================================================================== */
+
+#mobile-landscape-prompt {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: none;
+    place-items: center;
+    padding: 24px;
+    background: rgba(12, 12, 13, 0.92);
+    color: #f8f1e7;
+    text-align: center;
+    pointer-events: auto;
+}
+
+#mobile-landscape-prompt.is-visible {
+    display: grid;
+}
+
+.mobile-landscape-prompt__card {
+    width: min(420px, calc(100vw - 42px));
+    padding: 28px 24px;
+    border: 1px solid rgba(215, 179, 106, 0.34);
+    border-radius: 18px;
+    background: rgba(24, 22, 19, 0.82);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(20px);
+}
+
+.mobile-landscape-prompt__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 16px;
+    border: 2px solid rgba(215, 179, 106, 0.72);
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    color: #d7b36a;
+    font-size: 38px;
+    line-height: 1;
+    transform: rotate(90deg);
+}
+
+.mobile-landscape-prompt__card h2 {
+    margin: 0;
+    color: #d7b36a;
+    font-size: 24px;
+}
+
+.mobile-landscape-prompt__card p {
+    margin: 12px 0 0;
+    color: rgba(248, 241, 231, 0.82);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+#mobile-dpad {
+    display: none !important;
+}
+
+#mobile-joystick {
+    position: fixed;
+    left: max(18px, env(safe-area-inset-left));
+    bottom: max(18px, env(safe-area-inset-bottom));
+    z-index: 1202;
+    display: grid;
+    place-items: center;
+    width: clamp(116px, 19vw, 148px);
+    height: clamp(116px, 19vw, 148px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.14) 0 28%, rgba(255, 255, 255, 0.04) 29% 100%),
+        rgba(18, 16, 14, 0.5);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.36);
+    opacity: 0.86;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#mobile-joystick::before,
+#mobile-joystick::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.22);
+    pointer-events: none;
+}
+
+#mobile-joystick::before {
+    width: 1px;
+    height: 68%;
+}
+
+#mobile-joystick::after {
+    width: 68%;
+    height: 1px;
+}
+
+#mobile-joystick.is-active {
+    opacity: 1;
+    border-color: rgba(215, 179, 106, 0.58);
+}
+
+#joystick-handle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(46px, 7.8vw, 58px);
+    height: clamp(46px, 7.8vw, 58px);
+    margin-left: calc(clamp(46px, 7.8vw, 58px) / -2);
+    margin-top: calc(clamp(46px, 7.8vw, 58px) / -2);
+    border: 2px solid rgba(255, 255, 255, 0.84);
+    border-radius: 50%;
+    background: rgba(215, 179, 106, 0.82);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
+    transition: transform 0.06s linear, background 0.16s ease;
+    will-change: transform;
+}
+
+#mobile-joystick.is-active #joystick-handle {
+    background: #d7b36a;
+}
+
+.mobile-joystick__label {
+    position: absolute;
+    left: 50%;
+    bottom: -23px;
+    transform: translateX(-50%);
+    color: rgba(248, 241, 231, 0.76);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.56);
+    pointer-events: none;
+}
+
+#mobile-action-button {
+    right: max(22px, env(safe-area-inset-right));
+    bottom: max(26px, env(safe-area-inset-bottom));
+    z-index: 1203;
+    width: clamp(82px, 13vw, 98px);
+    height: clamp(82px, 13vw, 98px);
+    font-size: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.36);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    html,
+    body,
+    #container,
+    #canvas-container {
+        width: 100vw;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    body.has-mobile-controls #logo {
+        top: max(10px, env(safe-area-inset-top));
+        left: max(12px, env(safe-area-inset-left));
+        max-width: 38vw;
+        padding: 8px 12px;
+        border-radius: 10px;
+        opacity: 0.86;
+    }
+
+    body.has-mobile-controls .logo-text {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+    }
+
+    body.has-mobile-controls .logo-subtitle {
+        display: none;
+    }
+
+    body.has-mobile-controls .free-exploration-hud__button {
+        top: max(10px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        min-height: 32px;
+        padding: 0 11px;
+        border-radius: 10px;
+        font-size: 11px;
+        background: rgba(18, 16, 14, 0.45);
+        backdrop-filter: blur(12px);
+    }
+
+    body.has-mobile-controls .current-room-indicator {
+        top: max(52px, calc(env(safe-area-inset-top) + 48px));
+        left: max(12px, env(safe-area-inset-left));
+        max-width: min(46vw, 360px);
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(18, 16, 14, 0.46);
+    }
+
+    body.has-mobile-controls .current-room-indicator span {
+        font-size: 8.5px;
+        letter-spacing: 0.1em;
+    }
+
+    body.has-mobile-controls .current-room-indicator strong {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 11.5px;
+        line-height: 1.22;
+    }
+
+    body.has-mobile-controls .room-narration {
+        left: 50%;
+        bottom: max(16px, env(safe-area-inset-bottom));
+        width: min(44vw, 430px);
+        padding: 9px 12px;
+        font-size: 11px;
+        line-height: 1.38;
+        background: rgba(18, 16, 14, 0.5);
+    }
+
+    body.has-mobile-controls .proximity-phrase {
+        top: auto;
+        bottom: max(92px, calc(env(safe-area-inset-bottom) + 86px));
+        width: min(46vw, 420px);
+        padding: 7px 10px;
+        font-size: 10.5px;
+        background: rgba(18, 16, 14, 0.48);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+    .welcome-overlay {
+        width: min(560px, calc(100vw - 56px));
+        max-height: calc(100dvh - 28px);
+        overflow: auto;
+        padding: 18px 20px;
+        border-radius: 14px;
+    }
+
+    .welcome-overlay h1 {
+        margin-top: 8px;
+        font-size: clamp(22px, 4.4vw, 30px);
+    }
+
+    .welcome-overlay p {
+        margin-top: 10px;
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .welcome-overlay__actions {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 16px;
+    }
+
+    .welcome-overlay__extras {
+        margin-top: 10px;
+    }
+
+    #mobile-joystick {
+        left: max(18px, env(safe-area-inset-left));
+        bottom: max(22px, env(safe-area-inset-bottom));
+        width: clamp(108px, 16.5vw, 140px);
+        height: clamp(108px, 16.5vw, 140px);
+    }
+
+    #mobile-action-button {
+        right: max(24px, env(safe-area-inset-right));
+        bottom: max(26px, env(safe-area-inset-bottom));
+        width: clamp(78px, 11vw, 96px);
+        height: clamp(78px, 11vw, 96px);
+    }
+
+    body.has-mobile-controls .artwork-panel {
+        left: auto;
+        right: max(18px, env(safe-area-inset-right));
+        bottom: calc(max(112px, 14vw) + max(18px, env(safe-area-inset-bottom)));
+        width: min(340px, 42vw);
+        max-height: min(48dvh, 330px);
+    }
+
+    .modal-content.artwork-detail {
+        grid-template-columns: minmax(0, 52%) minmax(280px, 48%);
+        grid-template-rows: 1fr;
+        width: calc(100vw - 28px);
+        height: calc(100dvh - 28px);
+        border-radius: 14px;
+    }
+
+    .artwork-detail__body {
+        padding: 24px 20px 22px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 0;
+    }
+
+    .artwork-detail__body h2 {
+        font-size: clamp(22px, 3.2vw, 30px);
+    }
+
+    .artwork-detail__panel p {
+        font-size: clamp(14px, 2.3vw, 16px);
+        line-height: 1.55;
+    }
+
+    .artwork-detail__image,
+    .artwork-detail__video {
+        max-height: calc(100dvh - 84px);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) {
+    body.mobile-landscape-requested #mobile-joystick,
+    body.mobile-landscape-requested #mobile-action-button,
+    body.mobile-landscape-requested #mobile-look-area,
+    body.mobile-landscape-requested .current-room-indicator,
+    body.mobile-landscape-requested .room-narration,
+    body.mobile-landscape-requested .proximity-phrase {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+}

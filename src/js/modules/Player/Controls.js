@@ -24,12 +24,16 @@ export class FirstPersonControls {
         this.dragLookLastX = 0;
         this.dragLookLastY = 0;
 
-        /** @type {boolean} Keyboard or touch forward movement state. */
+        /** @type {boolean} Keyboard movement state. */
         this.moveForward = false;
         this.moveBackward = false;
         this.moveLeft = false;
         this.moveRight = false;
         this.isRunning = false;
+
+        /** Analog movement axes supplied by the mobile virtual joystick. */
+        this.touchMoveX = 0;
+        this.touchMoveZ = 0;
 
         /** Vectors reused every frame to avoid unnecessary allocations. */
         this.velocity = new THREE.Vector3();
@@ -198,8 +202,14 @@ export class FirstPersonControls {
             return;
         }
 
-        this.direction.z = Number(this.moveForward) - Number(this.moveBackward);
-        this.direction.x = Number(this.moveRight) - Number(this.moveLeft);
+        const touchMovementActive = Math.hypot(this.touchMoveX, this.touchMoveZ) > 0.04;
+        if (touchMovementActive) {
+            this.direction.z = this.touchMoveZ;
+            this.direction.x = this.touchMoveX;
+        } else {
+            this.direction.z = Number(this.moveForward) - Number(this.moveBackward);
+            this.direction.x = Number(this.moveRight) - Number(this.moveLeft);
+        }
         const isMoving = this.direction.lengthSq() > 0;
         const currentSpeed = this.isRunning ? this.config.runSpeed : this.config.walkSpeed;
 
@@ -289,10 +299,25 @@ export class FirstPersonControls {
         this.moveLeft = false;
         this.moveRight = false;
         this.isRunning = false;
+        this.touchMoveX = 0;
+        this.touchMoveZ = 0;
         this.velocity.set(0, 0, 0);
         this.desiredVelocity.set(0, 0, 0);
         this.horizontalSpeed = 0;
         this.speedRatio = 0;
+    }
+
+
+    /**
+     * Sets analog movement from the mobile virtual joystick.
+     *
+     * @param {number} xAxis - Left/right movement axis in the range -1..1.
+     * @param {number} zAxis - Forward/backward movement axis in the range -1..1.
+     */
+    setTouchMovement(xAxis, zAxis) {
+        const clampAxis = (value) => THREE.MathUtils.clamp(Number(value) || 0, -1, 1);
+        this.touchMoveX = clampAxis(xAxis);
+        this.touchMoveZ = clampAxis(zAxis);
     }
 
     /**

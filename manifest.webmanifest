@@ -1,0 +1,10 @@
+{
+  "name": "Minahasa Digital Museum",
+  "short_name": "Minahasa Museum",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#181613",
+  "theme_color": "#181613",
+  "description": "Museum digital sejarah dan budaya Minahasa."
+}

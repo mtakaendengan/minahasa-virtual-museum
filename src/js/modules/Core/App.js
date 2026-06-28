@@ -81,6 +81,7 @@ export class App {
         this.nearbyArtworkId = null;
         this.roomNarrationTimer = null;
         this.suppressTourExitUntil = 0;
+        this.updateMobileLandscapePrompt = null;
     }
 
     /**
@@ -250,9 +251,19 @@ export class App {
      * Registers global browser and application overlay events.
      */
     setupEvents() {
-        window.addEventListener('resize', () => this.onWindowResize());
+        window.addEventListener('resize', () => {
+            this.onWindowResize();
+            this.updateMobileLandscapePrompt?.();
+        });
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                this.onWindowResize();
+                this.updateMobileLandscapePrompt?.();
+            }, 250);
+        });
         this.setupGuidedTourExitFallback();
         this.setupCreditsModal();
+        this.setupMobileLandscapePrompt();
     }
 
     /**
@@ -482,7 +493,7 @@ export class App {
             <div class="welcome-overlay__eyebrow">Museum virtual</div>
             <h1>Sejarah Minahasa</h1>
             <p class="welcome-overlay__subtitle">Jelajahi museum digital tentang tanah, manusia, budaya, dan ingatan sejarah Minahasa.</p>
-            <p>Pilih mode kunjungan. Di desktop, gunakan W/A/S/D untuk bergerak dan mouse untuk melihat. Di ponsel, gunakan D-Pad untuk bergerak, geser layar untuk melihat sekitar, lalu tekan “Lihat” saat penanda berada di pameran.</p>
+            <p>Pilih mode kunjungan. Di desktop, gunakan W/A/S/D untuk bergerak dan mouse untuk melihat. Di ponsel, gunakan joystick virtual untuk bergerak, geser layar untuk melihat sekitar, lalu tekan “Lihat” saat penanda berada di pameran. Mode ponsel akan mencoba masuk landscape otomatis.</p>
             <div class="welcome-overlay__actions">
                 <button id="start-walking" type="button" data-ui-interactive="true">Jelajahi Museum</button>
                 <button id="start-tour" type="button" data-ui-interactive="true">Tur Terpandu</button>
@@ -494,7 +505,8 @@ export class App {
 
         document.body.appendChild(instructions);
 
-        document.getElementById('start-walking')?.addEventListener('click', () => {
+        document.getElementById('start-walking')?.addEventListener('click', async () => {
+            await this.enterMobileLandscapeMode();
             instructions.remove();
             this.startMenuActive = false;
             this.enableFreeExploration({ createMobileControls: true });
@@ -506,7 +518,8 @@ export class App {
             }
         });
 
-        document.getElementById('start-tour')?.addEventListener('click', () => {
+        document.getElementById('start-tour')?.addEventListener('click', async () => {
+            await this.enterMobileLandscapeMode();
             instructions.remove();
             this.startMenuActive = false;
             this.startGuidedTour();
@@ -620,32 +633,96 @@ export class App {
      * @returns {boolean} True for common mobile user agents or narrow viewports.
      */
     detectMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-            || window.innerWidth <= 768;
+        const mobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const touchFirst = window.matchMedia?.('(hover: none) and (pointer: coarse)').matches || navigator.maxTouchPoints > 1;
+        const compactViewport = Math.min(window.innerWidth, window.innerHeight) <= 768;
+        return mobileUserAgent || (touchFirst && compactViewport);
     }
 
     /**
-     * Creates the touch joystick, look area, and centered action button.
+     * Creates and updates a rotate-device prompt for phones.
+     *
+     * Browsers only allow real orientation locking after a user gesture and often
+     * require fullscreen. If the lock is refused, this prompt keeps the app usable
+     * by asking the visitor to rotate the phone manually.
+     */
+    setupMobileLandscapePrompt() {
+        if (document.getElementById('mobile-landscape-prompt')) return;
+
+        const prompt = document.createElement('div');
+        prompt.id = 'mobile-landscape-prompt';
+        prompt.setAttribute('data-ui-interactive', 'true');
+        prompt.innerHTML = `
+            <div class="mobile-landscape-prompt__card">
+                <div class="mobile-landscape-prompt__icon" aria-hidden="true">↻</div>
+                <h2>Putar Ponsel</h2>
+                <p>Museum ini lebih nyaman dalam mode landscape. Kami akan mencoba mengaktifkannya otomatis; jika tidak berhasil, putar ponsel Anda.</p>
+            </div>
+        `;
+        document.body.appendChild(prompt);
+
+        this.updateMobileLandscapePrompt = () => {
+            const isMobile = this.detectMobileDevice();
+            const isPortrait = window.matchMedia?.('(orientation: portrait)').matches
+                ?? window.innerHeight > window.innerWidth;
+            const shouldShow = isMobile && isPortrait && (this.startMenuActive || this.freeExplorationActive || this.tourController?.isActive());
+            document.body.classList.toggle('mobile-portrait-warning', shouldShow);
+            prompt.classList.toggle('is-visible', shouldShow);
+        };
+
+        this.updateMobileLandscapePrompt();
+    }
+
+    /**
+     * Best-effort mobile landscape lock.
+     *
+     * This must run from a user tap. Unsupported browsers simply fall back to the
+     * rotate-device prompt and landscape-specific responsive layout.
+     */
+    async enterMobileLandscapeMode() {
+        if (!this.detectMobileDevice()) return;
+
+        document.body.classList.add('mobile-landscape-requested');
+
+        try {
+            if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+                await document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+            }
+        } catch (error) {
+            console.info('Fullscreen request skipped:', error?.message || error);
+        }
+
+        try {
+            await screen.orientation?.lock?.('landscape');
+        } catch (error) {
+            console.info('Landscape orientation lock skipped:', error?.message || error);
+        }
+
+        this.updateMobileLandscapePrompt?.();
+        setTimeout(() => this.onWindowResize(), 300);
+    }
+
+    /**
+     * Creates the mobile virtual joystick, look area, and centered action button.
      *
      * The action button synthesizes a centered click so mobile users can select
      * the artwork currently under the crosshair.
      */
     createMobileControls() {
-        if (document.getElementById('mobile-dpad')) return;
+        if (document.getElementById('mobile-joystick')) return;
 
         document.body.classList.add('has-mobile-controls');
+        this.updateMobileLandscapePrompt?.();
 
-        const dpad = document.createElement('div');
-        dpad.id = 'mobile-dpad';
-        dpad.setAttribute('data-ui-interactive', 'true');
-        dpad.setAttribute('aria-label', 'Kontrol gerak D-Pad');
-        dpad.innerHTML = `
-            <button class="mobile-dpad__button mobile-dpad__button--up" type="button" data-dir="forward" aria-label="Maju">▲</button>
-            <button class="mobile-dpad__button mobile-dpad__button--left" type="button" data-dir="left" aria-label="Kiri">◀</button>
-            <button class="mobile-dpad__button mobile-dpad__button--right" type="button" data-dir="right" aria-label="Kanan">▶</button>
-            <button class="mobile-dpad__button mobile-dpad__button--down" type="button" data-dir="backward" aria-label="Mundur">▼</button>
+        const joystick = document.createElement('div');
+        joystick.id = 'mobile-joystick';
+        joystick.setAttribute('data-ui-interactive', 'true');
+        joystick.setAttribute('aria-label', 'Joystick virtual untuk bergerak');
+        joystick.innerHTML = `
+            <div id="joystick-handle" aria-hidden="true"></div>
+            <span class="mobile-joystick__label">Gerak</span>
         `;
-        document.body.appendChild(dpad);
+        document.body.appendChild(joystick);
 
         const lookArea = document.createElement('div');
         lookArea.id = 'mobile-look-area';
@@ -675,58 +752,92 @@ export class App {
         const crosshair = document.getElementById('crosshair');
         if (crosshair) crosshair.classList.add('active');
 
-        this.setupMobileEventListeners(dpad, lookArea);
+        this.setupMobileEventListeners(joystick, lookArea);
     }
 
     /**
-     * Registers touch/pointer handlers for D-Pad movement and drag-to-look.
+     * Registers touch/pointer handlers for analog joystick movement and drag look.
      *
-     * @param {HTMLElement} dpad - Directional movement pad.
+     * @param {HTMLElement} joystick - Analog movement pad.
      * @param {HTMLElement} lookArea - Full-screen look touch surface.
      */
-    setupMobileEventListeners(dpad, lookArea) {
-        const activeDirections = new Set();
+    setupMobileEventListeners(joystick, lookArea) {
+        const handle = joystick.querySelector('#joystick-handle');
+        let movePointerId = null;
+        let moveCenterX = 0;
+        let moveCenterY = 0;
+        let moveRadius = 1;
         let lookPointerId = null;
         let touchStartX = 0;
         let touchStartY = 0;
 
-        const updateMovementFromDpad = () => {
-            this.controls.moveForward = activeDirections.has('forward');
-            this.controls.moveBackward = activeDirections.has('backward');
-            this.controls.moveLeft = activeDirections.has('left');
-            this.controls.moveRight = activeDirections.has('right');
+        const resetJoystick = () => {
+            movePointerId = null;
+            handle.style.transform = 'translate3d(0, 0, 0)';
+            joystick.classList.remove('is-active');
+            this.controls.setTouchMovement?.(0, 0);
         };
 
-        const releaseDirection = (button) => {
-            if (!button) return;
-            activeDirections.delete(button.dataset.dir);
-            button.classList.remove('is-pressed');
-            updateMovementFromDpad();
+        const updateJoystick = (clientX, clientY) => {
+            const dx = clientX - moveCenterX;
+            const dy = clientY - moveCenterY;
+            const distance = Math.hypot(dx, dy);
+            const scale = distance > moveRadius ? moveRadius / distance : 1;
+            const x = dx * scale;
+            const y = dy * scale;
+            const axisX = x / moveRadius;
+            const axisZ = -y / moveRadius;
+            const magnitude = Math.hypot(axisX, axisZ);
+            const deadzone = 0.13;
+
+            handle.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+
+            if (magnitude < deadzone) {
+                this.controls.setTouchMovement?.(0, 0);
+                return;
+            }
+
+            const adjustedMagnitude = Math.min(1, (magnitude - deadzone) / (1 - deadzone));
+            const normalizedX = axisX / magnitude;
+            const normalizedZ = axisZ / magnitude;
+            this.controls.setTouchMovement?.(normalizedX * adjustedMagnitude, normalizedZ * adjustedMagnitude);
         };
 
-        dpad.querySelectorAll('[data-dir]').forEach((button) => {
-            button.addEventListener('pointerdown', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                button.setPointerCapture?.(event.pointerId);
-                activeDirections.add(button.dataset.dir);
-                button.classList.add('is-pressed');
-                updateMovementFromDpad();
-            });
+        joystick.addEventListener('pointerdown', (event) => {
+            if (movePointerId !== null || event.pointerType === 'mouse') return;
 
-            button.addEventListener('pointerup', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                releaseDirection(button);
-            });
-
-            button.addEventListener('pointercancel', () => releaseDirection(button));
-            button.addEventListener('lostpointercapture', () => releaseDirection(button));
-            button.addEventListener('contextmenu', (event) => event.preventDefault());
+            event.preventDefault();
+            event.stopPropagation();
+            const rect = joystick.getBoundingClientRect();
+            moveCenterX = rect.left + rect.width / 2;
+            moveCenterY = rect.top + rect.height / 2;
+            moveRadius = Math.max(24, rect.width * 0.32);
+            movePointerId = event.pointerId;
+            joystick.classList.add('is-active');
+            joystick.setPointerCapture?.(event.pointerId);
+            updateJoystick(event.clientX, event.clientY);
         });
+
+        joystick.addEventListener('pointermove', (event) => {
+            if (event.pointerId !== movePointerId) return;
+            event.preventDefault();
+            event.stopPropagation();
+            updateJoystick(event.clientX, event.clientY);
+        });
+
+        const endJoystick = (event) => {
+            if (event.pointerId !== movePointerId) return;
+            joystick.releasePointerCapture?.(event.pointerId);
+            resetJoystick();
+        };
+        joystick.addEventListener('pointerup', endJoystick);
+        joystick.addEventListener('pointercancel', endJoystick);
+        joystick.addEventListener('lostpointercapture', resetJoystick);
+        joystick.addEventListener('contextmenu', (event) => event.preventDefault());
 
         lookArea.addEventListener('pointerdown', (event) => {
             if (lookPointerId !== null || event.pointerType === 'mouse') return;
+            if (event.target?.closest?.('[data-ui-interactive="true"]')) return;
 
             event.preventDefault();
             lookPointerId = event.pointerId;
@@ -741,7 +852,7 @@ export class App {
             event.preventDefault();
             const deltaX = event.clientX - touchStartX;
             const deltaY = event.clientY - touchStartY;
-            const lookSensitivity = 0.0044;
+            const lookSensitivity = 0.0042;
 
             this.controls.targetRotationY -= deltaX * lookSensitivity;
             this.controls.targetRotationX -= deltaY * lookSensitivity;
@@ -1139,7 +1250,7 @@ export class App {
         loader.style.display = 'flex';
         loader.innerHTML = `
             <div class="loader-content">
-                <p>No se pudo cargar el museo. Revisa la consola del navegador.</p>
+                <p>Museum tidak dapat dimuat. Periksa konsol browser.</p>
             </div>
         `;
     }
