@@ -1,0 +1,1530 @@
+[
+  {
+    "id": "peta-tanah-minahasa",
+    "title": "Peta Tanah Minahasa / Map of Minahasa Land",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Orientasi / Orientation",
+    "technique": "Peta budaya dan geografi / Cultural and geographic map",
+    "description": "ID: Kisah dimulai dari tanah Minahasa di Sulawesi Utara: pegunungan, danau, pesisir, dan jalur perjumpaan. Dalam istilah lokal, tou berarti manusia/orang, sedangkan wanua dipakai untuk membayangkan kampung atau tanah asal; dari sini lahir rasa Kawanua.\n\nEN: The story begins with Minahasa in North Sulawesi: mountains, lakes, coasts, and routes of encounter. Local terms frame the journey: tou means person or people, while wanua evokes village or homeland; together they point toward Kawanua identity.\n\nIstilah Minahasa/lokal: Tou, wanua, Kawanua.",
+    "image": "./src/assets/images/minahasa/minahasa-region-map.jpg",
+    "video": "",
+    "position": [
+      -11.2,
+      2.2,
+      -13.7
+    ],
+    "size": [
+      1.9,
+      2.35
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 1,
+    "period": "Pengantar wilayah / Regional introduction",
+    "themes": [
+      "Tou",
+      "wanua",
+      "Kawanua"
+    ],
+    "formalReading": "ID: Pameran 1/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 1/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tou",
+      "wanua",
+      "Kawanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "The Minahasan languages / Sneddon overview",
+        "url": "https://sulang.org/sites/default/files/sulangtrans024-v1.pdf"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "subetnis-minahasa",
+    "title": "Subetnis dan Wilayah / Sub-Ethnic Communities and Territories",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Pra-kolonial hingga kini / Precolonial to present",
+    "technique": "Peta komunitas / Community map",
+    "description": "ID: Minahasa bukan satu kelompok yang seragam. Nama-nama seperti Tonsea, Tombulu, Tontemboan, Tondano atau Toulour, dan Tonsawang menunjukkan mozaik komunitas, bahasa, dan wilayah. Istilah tou mengingatkan bahwa sejarah ini adalah sejarah manusia dan hubungan antarkampung.\n\nEN: Minahasa is not one uniform group. Names such as Tonsea, Tombulu, Tontemboan, Tondano or Toulour, and Tonsawang reveal a mosaic of communities, languages, and territories. The term tou reminds visitors that this is a history of people and relationships among settlements.\n\nIstilah Minahasa/lokal: Tonsea, Tombulu, Tontemboan, Tondano/Toulour.",
+    "image": "./src/assets/images/minahasa/minahasa-subethnic-map.jpg",
+    "video": "",
+    "position": [
+      -6.85,
+      2.2,
+      -13.7
+    ],
+    "size": [
+      2.2,
+      1.8
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 2,
+    "period": "Komunitas awal / Early communities",
+    "themes": [
+      "Tonsea",
+      "Tombulu",
+      "Tontemboan",
+      "Tondano/Toulour"
+    ],
+    "formalReading": "ID: Pameran 2/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 2/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tonsea",
+      "Tombulu",
+      "Tontemboan",
+      "Tondano/Toulour",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "The Minahasan languages / Sneddon overview",
+        "url": "https://sulang.org/sites/default/files/sulangtrans024-v1.pdf"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "bahasa-minahasa",
+    "title": "Bahasa-Bahasa Minahasa / Minahasan Languages",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Warisan Austronesia / Austronesian heritage",
+    "technique": "Peta linguistik / Linguistic map",
+    "description": "ID: Bahasa Minahasa mencakup beberapa bahasa daerah, termasuk Tombulu, Tonsea, Tondano, Tontemboan, dan Tonsawang. Di museum ini, istilah lokal dipakai sebagai jembatan budaya; untuk publikasi resmi, ejaan dan makna sebaiknya dicek bersama penutur dan budayawan.\n\nEN: Minahasa includes several local languages, including Tombulu, Tonsea, Tondano, Tontemboan, and Tonsawang. This museum uses local terms as cultural bridges; for formal publication, spelling and meaning should be checked with speakers and cultural experts.\n\nIstilah Minahasa/lokal: Tombulu, Tonsea, Tondano, Tontemboan, Tonsawang.",
+    "image": "./src/assets/images/minahasa/minahasa-linguistic-map.jpg",
+    "video": "",
+    "position": [
+      -2.35,
+      2.2,
+      -13.7
+    ],
+    "size": [
+      1.9,
+      2.35
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 3,
+    "period": "Bahasa dan identitas / Language and identity",
+    "themes": [
+      "Tombulu",
+      "Tonsea",
+      "Tondano",
+      "Tontemboan",
+      "Tonsawang"
+    ],
+    "formalReading": "ID: Pameran 3/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 3/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tombulu",
+      "Tonsea",
+      "Tondano",
+      "Tontemboan",
+      "Tonsawang",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "The Minahasan languages / Sneddon overview",
+        "url": "https://sulang.org/sites/default/files/sulangtrans024-v1.pdf"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "danau-tondano",
+    "title": "Danau Tondano dan Pegunungan / Lake Tondano and the Highlands",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Lanskap sejarah / Historical landscape",
+    "technique": "Foto lanskap / Landscape photograph",
+    "description": "ID: Danau Tondano menjadi pusat lanskap, pertanian, dan ingatan. Nama Tou Dano atau Toulour sering dihubungkan dengan “orang air”; istilah rano mengingatkan pada air sebagai pembentuk ruang hidup dan identitas.\n\nEN: Lake Tondano is a center of landscape, agriculture, and memory. The name Tou Dano or Toulour is often associated with “people of the water”; the term rano points to water as a force shaping life and identity.\n\nIstilah Minahasa/lokal: Tou Dano, Toulour, rano.",
+    "image": "./src/assets/images/minahasa/lake-tondano-view.jpg",
+    "video": "",
+    "position": [
+      2.35,
+      2.25,
+      -13.7
+    ],
+    "size": [
+      2.6,
+      2.05
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 4,
+    "period": "Lingkungan dan pemukiman / Environment and settlement",
+    "themes": [
+      "Tou Dano",
+      "Toulour",
+      "rano"
+    ],
+    "formalReading": "ID: Pameran 4/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 4/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tou Dano",
+      "Toulour",
+      "rano",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      },
+      {
+        "label": "The Minahasan languages / Sneddon overview",
+        "url": "https://sulang.org/sites/default/files/sulangtrans024-v1.pdf"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "sawah-air-tondano",
+    "title": "Sawah, Air, dan Kehidupan / Rice Fields, Water, and Livelihood",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Kehidupan harian / Everyday life",
+    "technique": "Foto pertanian / Agricultural photograph",
+    "description": "ID: Sawah dan air memperlihatkan hubungan antara tanah, kerja, dan komunitas. Semangat Mapalus—kerja bersama, saling bantu, dan tanggung jawab sosial—membantu kita membaca pertanian sebagai budaya, bukan hanya ekonomi.\n\nEN: Rice fields and water reveal the relationship between land, labor, and community. The spirit of Mapalus—collective work, mutual help, and social responsibility—helps us read agriculture as culture, not only economy.\n\nIstilah Minahasa/lokal: Mapalus, rano, wanua.",
+    "image": "./src/assets/images/minahasa/lake-tondano-paddy-fields.jpg",
+    "video": "",
+    "position": [
+      6.85,
+      2.2,
+      -13.7
+    ],
+    "size": [
+      2.2,
+      1.7
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 5,
+    "period": "Pertanian tradisional dan modern / Traditional and modern agriculture",
+    "themes": [
+      "Mapalus",
+      "rano",
+      "wanua"
+    ],
+    "formalReading": "ID: Pameran 5/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 5/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Mapalus",
+      "rano",
+      "wanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "The Existence of Mapalus in Minahasa Community",
+        "url": "https://www.ijassjournal.com/2023/V6I2/4146663159.pdf"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "danau-sebagai-ingatan",
+    "title": "Danau sebagai Ingatan / The Lake as Memory",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Lanskap leluhur / Ancestral landscape",
+    "technique": "Foto lanskap / Landscape photograph",
+    "description": "ID: Danau bukan hanya pemandangan. Dalam museum ini, Danau Tondano menjadi ruang ingatan: tempat manusia, wanua, dan cerita leluhur atau opo-opo saling berhubungan.\n\nEN: The lake is not only scenery. In this museum, Lake Tondano becomes a space of memory where people, settlements, and ancestral stories are connected.\n\nIstilah Minahasa/lokal: Tou Dano, wanua, opo-opo.",
+    "image": "./src/assets/images/minahasa/danau-tondano.jpg",
+    "video": "",
+    "position": [
+      11.2,
+      2.2,
+      -13.7
+    ],
+    "size": [
+      1.9,
+      2.35
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 6,
+    "period": "Air, cerita, dan tempat / Water, story, and place",
+    "themes": [
+      "Tou Dano",
+      "wanua",
+      "opo-opo"
+    ],
+    "formalReading": "ID: Pameran 6/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 6/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tou Dano",
+      "wanua",
+      "opo-opo",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing."
+  },
+  {
+    "id": "toar-lumimuut",
+    "title": "Toar dan Lumimuut / Toar and Lumimuut",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Ingatan asal-usul / Origin memory",
+    "technique": "Narasi lisan dan situs batu / Oral narrative and stone site",
+    "description": "ID: Legenda Toar dan Lumimuut hidup sebagai memori asal-usul Minahasa. Kisah ini dipahami sebagai warisan makna tentang manusia, alam, leluhur, dan Opo atau Yang Ilahi dalam imajinasi budaya.\n\nEN: The legend of Toar and Lumimuut lives as a Minahasan origin memory. It is presented as inherited meaning about people, nature, ancestors, and Opo, the divine, in cultural imagination.\n\nIstilah Minahasa/lokal: Toar, Lumimuut, Opo.",
+    "image": "./src/assets/images/minahasa/watu-pinawetengan-main-stone.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      -11.2
+    ],
+    "size": [
+      2.05,
+      1.75
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 7,
+    "period": "Tradisi lisan / Oral tradition",
+    "themes": [
+      "Toar",
+      "Lumimuut",
+      "Opo"
+    ],
+    "formalReading": "ID: Pameran 7/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 7/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Toar",
+      "Lumimuut",
+      "Opo",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Watu Pinawetengan overview",
+        "url": "https://id.wikipedia.org/wiki/Watu_Pinawetengan"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "goresan-watu-pinawetengan",
+    "title": "Goresan di Watu / Marks on the Stone",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Ingatan material / Material memory",
+    "technique": "Detail situs / Site detail",
+    "description": "ID: Goresan pada batu menjadi titik pertemuan antara benda, cerita, dan tafsir. Watu ini dibaca sebagai tetenger—penanda ingatan—yang mengundang pengunjung bertanya bagaimana cerita dijaga dari generasi ke generasi.\n\nEN: The marks on the stone form a meeting point between object, story, and interpretation. This watu is treated as a memory marker, inviting visitors to ask how stories are preserved across generations.\n\nIstilah Minahasa/lokal: watu, Pinawetengan, tetenger.",
+    "image": "./src/assets/images/minahasa/watu-pinawetengan-inscription.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      -6.85
+    ],
+    "size": [
+      2.35,
+      1.85
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 8,
+    "period": "Tanda dan tafsir / Marks and interpretation",
+    "themes": [
+      "watu",
+      "Pinawetengan",
+      "tetenger"
+    ],
+    "formalReading": "ID: Pameran 8/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 8/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "watu",
+      "Pinawetengan",
+      "tetenger",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Watu Pinawetengan overview",
+        "url": "https://id.wikipedia.org/wiki/Watu_Pinawetengan"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "watu-pinawetengan",
+    "title": "Watu Pinawetengan / The Stone of Division and Unity",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Situs ingatan leluhur / Ancestral memory site",
+    "technique": "Situs budaya / Cultural heritage site",
+    "description": "ID: Watu Pinawetengan dikenang sebagai tempat musyawarah, pembagian, dan persatuan. Watu berarti batu, sedangkan Pinawetengan berhubungan dengan pembagian. Dari batu ini, museum memperkenalkan gagasan esa: menjadi satu tanpa menghapus perbedaan.\n\nEN: Watu Pinawetengan is remembered as a place of deliberation, division, and unity. Watu means stone, while Pinawetengan is linked with division. From this stone, the museum introduces esa: becoming one without erasing difference.\n\nIstilah Minahasa/lokal: Watu, Pinawetengan, esa.",
+    "image": "./src/assets/images/minahasa/watu-pinawetengan.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      -2.35
+    ],
+    "size": [
+      2.05,
+      1.75
+    ],
+    "room": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "chapter": "Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins",
+    "storyOrder": 9,
+    "period": "Pembagian, kesepakatan, persatuan / Division, agreement, unity",
+    "themes": [
+      "Watu",
+      "Pinawetengan",
+      "esa"
+    ],
+    "formalReading": "ID: Pameran 9/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 9/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Watu",
+      "Pinawetengan",
+      "esa",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Watu Pinawetengan overview",
+        "url": "https://id.wikipedia.org/wiki/Watu_Pinawetengan"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "walak-dan-tonaas",
+    "title": "Walak dan Tonaas / Walak and Tonaas",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Komunitas pra-kolonial / Precolonial communities",
+    "technique": "Tata masyarakat / Social organization",
+    "description": "ID: Sebelum batas administratif modern, banyak komunitas Minahasa dikenal melalui jaringan walak. Pemimpin, tetua, dan figur adat seperti tonaas membantu mengatur hubungan antar-tou, tanah, keamanan, dan upacara.\n\nEN: Before modern administrative borders, many Minahasan communities were known through networks of walak. Leaders, elders, and customary figures such as tonaas helped manage relations among people, land, security, and ritual life.\n\nIstilah Minahasa/lokal: walak, tonaas, tou.",
+    "image": "./src/assets/images/minahasa/watu-mamarimbing.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      2.35
+    ],
+    "size": [
+      2.05,
+      1.75
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 10,
+    "period": "Pemerintahan lokal awal / Early local governance",
+    "themes": [
+      "walak",
+      "tonaas",
+      "tou"
+    ],
+    "formalReading": "ID: Pameran 10/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 10/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "walak",
+      "tonaas",
+      "tou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "waruga-mamarimbing",
+    "title": "Waruga Mamarimbing / Waruga at Mamarimbing",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Warisan megalitik / Megalithic heritage",
+    "technique": "Situs pemakaman batu / Stone burial site",
+    "description": "ID: Waruga adalah makam batu yang berhubungan dengan praktik penguburan dan penghormatan leluhur di Minahasa. Waruga Mamarimbing mengingatkan bahwa watu dapat menjadi rumah ingatan bagi opo-opo atau para leluhur.\n\nEN: Waruga are stone graves associated with burial practices and ancestral respect in Minahasa. Waruga Mamarimbing reminds visitors that stone can become a house of memory for the ancestors.\n\nIstilah Minahasa/lokal: waruga, watu, opo-opo.",
+    "image": "./src/assets/images/minahasa/waruga-mamarimbing.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      6.85
+    ],
+    "size": [
+      2.25,
+      1.8
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 11,
+    "period": "Leluhur, kematian, dan ingatan / Ancestors, death, and memory",
+    "themes": [
+      "waruga",
+      "watu",
+      "opo-opo"
+    ],
+    "formalReading": "ID: Pameran 11/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 11/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "waruga",
+      "watu",
+      "opo-opo",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Kemendikdasmen - Kompleks Waruga Airmadidi Bawah",
+        "url": "https://referensi.data.kemendikdasmen.go.id/budayakita/cagarbudaya/objek/KB000796"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "kompleks-waruga",
+    "title": "Kompleks Waruga / Waruga Cemetery",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Warisan megalitik / Megalithic heritage",
+    "technique": "Foto situs / Site photograph",
+    "description": "ID: Kompleks waruga memperlihatkan makam sebagai ruang komunitas. Di sini, kematian tidak dipisahkan dari wanua; ia menjadi bagian dari cara masyarakat menata ingatan, hormat, dan kesinambungan.\n\nEN: A waruga complex shows burial as a community space. Death is not separated from the village; it becomes part of how people organize memory, respect, and continuity.\n\nIstilah Minahasa/lokal: waruga, wanua, opo.",
+    "image": "./src/assets/images/minahasa/waruga-cemetery.jpg",
+    "video": "",
+    "position": [
+      -13.7,
+      2.2,
+      11.2
+    ],
+    "size": [
+      2.15,
+      1.7
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 12,
+    "period": "Ruang leluhur / Ancestral space",
+    "themes": [
+      "waruga",
+      "wanua",
+      "opo"
+    ],
+    "formalReading": "ID: Pameran 12/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 12/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "waruga",
+      "wanua",
+      "opo",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Kemendikdasmen - Kompleks Waruga Airmadidi Bawah",
+        "url": "https://referensi.data.kemendikdasmen.go.id/budayakita/cagarbudaya/objek/KB000796"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "ragam-hias-waruga",
+    "title": "Ragam Hias Waruga / Ornament on Waruga",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Seni batu / Stone art",
+    "technique": "Detail ukiran / Carved detail",
+    "description": "ID: Detail pada waruga menunjukkan bahwa batu bukan benda diam. Watu menyimpan bentuk, simbol, dan penghormatan. Ukiran-ukiran ini membantu kita melihat bagaimana masyarakat menata ingatan tentang hidup, mati, dan leluhur.\n\nEN: Details on waruga show that stone is not silent. Watu carries form, symbol, and respect. These carvings help visitors see how communities shaped memories of life, death, and ancestors.\n\nIstilah Minahasa/lokal: watu, waruga, opo.",
+    "image": "./src/assets/images/minahasa/waruga-detail.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      -11.2
+    ],
+    "size": [
+      1.9,
+      2.35
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 13,
+    "period": "Simbol dan kosmologi / Symbol and cosmology",
+    "themes": [
+      "watu",
+      "waruga",
+      "opo"
+    ],
+    "formalReading": "ID: Pameran 13/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 13/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "watu",
+      "waruga",
+      "opo",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Kemendikdasmen - Kompleks Waruga Airmadidi Bawah",
+        "url": "https://referensi.data.kemendikdasmen.go.id/budayakita/cagarbudaya/objek/KB000796"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "waruga-dan-pelestarian",
+    "title": "Waruga dan Pelestarian / Waruga and Preservation",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Masa kini / Present day",
+    "technique": "Warisan budaya / Cultural heritage",
+    "description": "ID: Waruga hari ini juga menjadi tanggung jawab pelestarian. Bagi Kawanua, situs seperti ini adalah tetenger sejarah: tanda yang menghubungkan keluarga, kampung, dan pendidikan budaya.\n\nEN: Today, waruga are also a responsibility of preservation. For Kawanua communities, such sites are historical markers connecting family, village, and cultural education.\n\nIstilah Minahasa/lokal: waruga, tetenger, Kawanua.",
+    "image": "./src/assets/images/minahasa/waruga-modern-photo.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      -6.85
+    ],
+    "size": [
+      2.05,
+      1.75
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 14,
+    "period": "Pelestarian situs / Heritage preservation",
+    "themes": [
+      "waruga",
+      "tetenger",
+      "Kawanua"
+    ],
+    "formalReading": "ID: Pameran 14/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 14/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "waruga",
+      "tetenger",
+      "Kawanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Kemendikdasmen - Kompleks Waruga Airmadidi Bawah",
+        "url": "https://referensi.data.kemendikdasmen.go.id/budayakita/cagarbudaya/objek/KB000796"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "walian-dan-ritus",
+    "title": "Walian dan Ritus / Walian and Ritual Life",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Spiritualitas lokal / Local spirituality",
+    "technique": "Potret sejarah / Historical portrait",
+    "description": "ID: Walian sering dipahami sebagai figur ritual atau penjaga pengetahuan adat. Pameran ini mengajak pengunjung tumalinga—mendengar dengan hormat—pada lapisan spiritual Minahasa sebelum dan sesudah perubahan agama besar.\n\nEN: Walian is often understood as a ritual figure or keeper of customary knowledge. This exhibit invites visitors to listen respectfully to the spiritual layers of Minahasa before and after major religious change.\n\nIstilah Minahasa/lokal: walian, Opo, tumalinga.",
+    "image": "./src/assets/images/minahasa/minahassa-priestess-headdress.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      -2.35
+    ],
+    "size": [
+      2.05,
+      1.75
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 15,
+    "period": "Pemimpin ritus dan pengetahuan / Ritual leadership and knowledge",
+    "themes": [
+      "walian",
+      "Opo",
+      "tumalinga"
+    ],
+    "formalReading": "ID: Pameran 15/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 15/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "walian",
+      "Opo",
+      "tumalinga",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "pakaian-kulit-kayu",
+    "title": "Pakaian Kulit Kayu / Barkcloth Clothing",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Kehidupan material / Material life",
+    "technique": "Potret etnografi / Ethnographic portrait",
+    "description": "ID: Pakaian, alat, dan bahan alam menunjukkan kecerdasan hidup sehari-hari. Seorang tou tidak hanya hidup di dalam wale, tetapi juga dalam jaringan hutan, kebun, dan wanua yang menyediakan bahan, kerja, dan identitas.\n\nEN: Clothing, tools, and natural materials reveal everyday intelligence. A person does not live only inside a house, but within networks of forest, garden, and village that provide materials, labor, and identity.\n\nIstilah Minahasa/lokal: tou, wale, wanua.",
+    "image": "./src/assets/images/minahasa/minahasa-barkcloth-farmer.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      2.35
+    ],
+    "size": [
+      2.45,
+      1.65
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 16,
+    "period": "Keterampilan dan bahan alam / Skills and natural materials",
+    "themes": [
+      "tou",
+      "wale",
+      "wanua"
+    ],
+    "formalReading": "ID: Pameran 16/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 16/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "tou",
+      "wale",
+      "wanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "wale-dan-kampung",
+    "title": "Wale dan Kampung / House and Village",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Arsitektur dan ruang sosial / Architecture and social space",
+    "technique": "Foto kampung / Village photograph",
+    "description": "ID: Rumah dan kampung adalah ruang sejarah sehari-hari. Wale berarti rumah, sedangkan walewangko dikenal sebagai bentuk rumah adat Minahasa. Di dalam wanua, keluarga, kerja, ibadah, dan adat saling bertemu.\n\nEN: House and village are everyday spaces of history. Wale means house, while walewangko is known as a Minahasan traditional house form. Within the wanua, family, labor, worship, and custom meet.\n\nIstilah Minahasa/lokal: wale, walewangko, wanua.",
+    "image": "./src/assets/images/minahasa/minahasa-village-houses.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      6.85
+    ],
+    "size": [
+      2.2,
+      1.7
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 17,
+    "period": "Kehidupan rumah tangga / Household life",
+    "themes": [
+      "wale",
+      "walewangko",
+      "wanua"
+    ],
+    "formalReading": "ID: Pameran 17/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 17/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "wale",
+      "walewangko",
+      "wanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "mapalus-pertanian",
+    "title": "Mapalus dan Pertanian / Mapalus and Agriculture",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Tradisi hidup / Living tradition",
+    "technique": "Sistem kerja dan solidaritas / Work system and solidarity",
+    "description": "ID: Mapalus adalah nilai kerja bersama dalam masyarakat Minahasa. Ia muncul dalam pertanian, bantuan duka, pembangunan, dan kehidupan sosial. Semangat saling membantu menjadi roh museum ini: sejarah dipelajari bersama.\n\nEN: Mapalus is a value of collective work in Minahasan society. It appears in farming, grief support, building, and social life. The spirit of helping one another becomes the spirit of this museum: history is learned together.\n\nIstilah Minahasa/lokal: Mapalus, masawang-sawangan, wanua.",
+    "image": "./src/assets/images/minahasa/ploughing-farmers-kawangkoan.jpg",
+    "video": "",
+    "position": [
+      13.7,
+      2.2,
+      11.2
+    ],
+    "size": [
+      2.1,
+      1.7
+    ],
+    "room": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "chapter": "Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life",
+    "storyOrder": 18,
+    "period": "Dari pertanian ke kehidupan sosial / From agriculture to social life",
+    "themes": [
+      "Mapalus",
+      "masawang-sawangan",
+      "wanua"
+    ],
+    "formalReading": "ID: Pameran 18/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 18/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Mapalus",
+      "masawang-sawangan",
+      "wanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "The Existence of Mapalus in Minahasa Community",
+        "url": "https://www.ijassjournal.com/2023/V6I2/4146663159.pdf"
+      },
+      {
+        "label": "Leimena Institute - Mapalus",
+        "url": "https://leimena.org/eng/mapalus/"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "kabasaran-tari-perang",
+    "title": "Kabasaran: Tari Perang / Kabasaran Warrior Dance",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Tradisi hidup / Living tradition",
+    "technique": "Tari, kostum, dan ingatan perang / Dance, costume, and martial memory",
+    "description": "ID: Kabasaran adalah tari keprajuritan Minahasa. Kostum merah, senjata, dan gerak tegas menghadirkan ingatan waraney atau pejuang. Teriakan seperti arotey dalam tradisi pertunjukan menambah kekuatan suasana.\n\nEN: Kabasaran is a Minahasan warrior dance. Red costume, weapons, and firm movement carry the memory of waraney, warriors or fighters. Performance cries such as arotey add intensity to the ceremonial atmosphere.\n\nIstilah Minahasa/lokal: Kabasaran, waraney, arotey.",
+    "image": "./src/assets/images/minahasa/kabasaran-dance.jpg",
+    "video": "",
+    "position": [
+      -11.2,
+      2.2,
+      13.7
+    ],
+    "size": [
+      2.1,
+      1.7
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 19,
+    "period": "Dari ingatan perang ke pertunjukan budaya / From war memory to cultural performance",
+    "themes": [
+      "Kabasaran",
+      "waraney",
+      "arotey"
+    ],
+    "formalReading": "ID: Pameran 19/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 19/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Kabasaran",
+      "waraney",
+      "arotey",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "waraney-penjaga-wanua",
+    "title": "Waraney: Penjaga Wanua / Waraney: Guardians of the Village",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Tradisi keprajuritan / Warrior tradition",
+    "technique": "Potret penari / Dancer portrait",
+    "description": "ID: Waraney menggambarkan keberanian dan kesiapsiagaan menjaga wanua. Dalam museum, figur ini tidak dirayakan sebagai kekerasan, melainkan sebagai simbol tanggung jawab melindungi komunitas dan martabat bersama.\n\nEN: Waraney evokes courage and readiness to guard the village. In this museum, the figure is not celebrated as violence, but as a symbol of responsibility to protect community and shared dignity.\n\nIstilah Minahasa/lokal: waraney, wanua, Kabasaran.",
+    "image": "./src/assets/images/minahasa/kabasaran-warrior-tomohon.jpg",
+    "video": "",
+    "position": [
+      -6.85,
+      2.2,
+      13.7
+    ],
+    "size": [
+      1.75,
+      2.35
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 20,
+    "period": "Keamanan, keberanian, dan adat / Security, courage, and custom",
+    "themes": [
+      "waraney",
+      "wanua",
+      "Kabasaran"
+    ],
+    "formalReading": "ID: Pameran 20/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 20/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "waraney",
+      "wanua",
+      "Kabasaran",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "tarian-kabasaran",
+    "title": "Tarian Kabasaran / Kabasaran Performance",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Masa kini / Present day",
+    "technique": "Pertunjukan budaya / Cultural performance",
+    "description": "ID: Hari ini Kabasaran hadir dalam festival, penyambutan tamu, dan acara budaya. Ia menjadi bahasa tubuh bagi tou Minahasa dan Kawanua: cara memperlihatkan identitas di ruang publik modern.\n\nEN: Today Kabasaran appears in festivals, welcoming ceremonies, and cultural events. It becomes a bodily language for Minahasan people and Kawanua: a way to show identity in modern public space.\n\nIstilah Minahasa/lokal: Kabasaran, tou, Kawanua.",
+    "image": "./src/assets/images/minahasa/tarian-kabasaran.jpg",
+    "video": "",
+    "position": [
+      -2.35,
+      2.2,
+      13.7
+    ],
+    "size": [
+      3,
+      1.55
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 21,
+    "period": "Upacara dan festival / Ceremony and festival",
+    "themes": [
+      "Kabasaran",
+      "tou",
+      "Kawanua"
+    ],
+    "formalReading": "ID: Pameran 21/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 21/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Kabasaran",
+      "tou",
+      "Kawanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "tarian-perang-tondano",
+    "title": "Tarian Perang di Tondano / War Dances in Tondano",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Awal abad ke-20 / Early twentieth century",
+    "technique": "Foto arsip / Archival photograph",
+    "description": "ID: Foto arsip membuat budaya terlihat sebagai momen sejarah. Tarian perang di Tondano menghubungkan Tou Dano, ingatan waraney, dan tatapan kamera kolonial. Pengunjung diajak bertanya siapa yang merekam dan bagaimana makna berubah.\n\nEN: Archival photographs turn culture into historical moments. War dances in Tondano connect Tou Dano, waraney memory, and the colonial camera. Visitors are invited to ask who recorded the scene and how meaning changed.\n\nIstilah Minahasa/lokal: Tou Dano, waraney, Kabasaran.",
+    "image": "./src/assets/images/minahasa/old-war-dances-tondano.jpg",
+    "video": "",
+    "position": [
+      2.35,
+      2.2,
+      13.7
+    ],
+    "size": [
+      2.1,
+      2.1
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 22,
+    "period": "Dari adat ke arsip / From custom to archive",
+    "themes": [
+      "Tou Dano",
+      "waraney",
+      "Kabasaran"
+    ],
+    "formalReading": "ID: Pameran 22/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 22/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Tou Dano",
+      "waraney",
+      "Kabasaran",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "penari-kabasaran-tomohon",
+    "title": "Penari Kabasaran Tomohon / Kabasaran Dancer in Tomohon",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Awal abad ke-20 / Early twentieth century",
+    "technique": "Foto arsip / Archival photograph",
+    "description": "ID: Penari Kabasaran dalam arsip memperlihatkan bagaimana tubuh menjadi pembawa ingatan. Gerak, kostum, dan senjata mewakili cerita waraney, tetapi juga memperlihatkan perubahan ketika budaya direkam dan dipamerkan.\n\nEN: The archived Kabasaran dancer shows how the body carries memory. Movement, costume, and weapons represent waraney stories, while also showing change when culture is recorded and displayed.\n\nIstilah Minahasa/lokal: Kabasaran, Tomohon, waraney.",
+    "image": "./src/assets/images/minahasa/kabasaran-dancer-tomohon.jpg",
+    "video": "",
+    "position": [
+      6.85,
+      2.2,
+      13.7
+    ],
+    "size": [
+      2,
+      1.75
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 23,
+    "period": "Tubuh, kostum, dan identitas / Body, costume, and identity",
+    "themes": [
+      "Kabasaran",
+      "Tomohon",
+      "waraney"
+    ],
+    "formalReading": "ID: Pameran 23/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 23/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Kabasaran",
+      "Tomohon",
+      "waraney",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "maengket-dan-ingatan",
+    "title": "Maengket: Nyanyi dan Tari / Maengket: Song and Dance",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Tradisi dan peringatan / Tradition and commemoration",
+    "technique": "Foto arsip pertunjukan / Archival performance photograph",
+    "description": "ID: Maengket memperlihatkan bagaimana nyanyian, gerak, dan kebersamaan membentuk memori publik. Seperti Mapalus, ia menempatkan tubuh dan suara tou dalam kerja bersama—bukan hanya menonton sejarah, tetapi menghidupkannya.\n\nEN: Maengket shows how song, movement, and togetherness shape public memory. Like Mapalus, it places people’s bodies and voices in collective work—not merely watching history, but living it.\n\nIstilah Minahasa/lokal: Maengket, Mapalus, tou.",
+    "image": "./src/assets/images/minahasa/maengket-voc-minahasa-commemoration.jpg",
+    "video": "",
+    "position": [
+      11.2,
+      2.2,
+      13.7
+    ],
+    "size": [
+      2.1,
+      1.75
+    ],
+    "room": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "chapter": "Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter",
+    "storyOrder": 24,
+    "period": "Seni pertunjukan dan memori publik / Performing arts and public memory",
+    "themes": [
+      "Maengket",
+      "Mapalus",
+      "tou"
+    ],
+    "formalReading": "ID: Pameran 24/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 24/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Maengket",
+      "Mapalus",
+      "tou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      3.1415926536,
+      0
+    ]
+  },
+  {
+    "id": "voc-dan-perjanjian",
+    "title": "VOC dan Perjanjian / VOC and Agreement",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Masa VOC / VOC period",
+    "technique": "Foto arsip peringatan / Archival commemoration photograph",
+    "description": "ID: Hubungan dengan VOC dan Belanda membawa aliansi, perubahan kuasa, dan ketegangan. Gagasan minaesa—menjadi satu—diuji oleh dunia baru perdagangan, benteng, misi, dan administrasi kolonial.\n\nEN: Relations with the VOC and Dutch power brought alliances, shifting authority, and tension. The idea of minaesa—becoming one—was tested by a new world of trade, forts, missions, and colonial administration.\n\nIstilah Minahasa/lokal: minaesa, esa, tou.",
+    "image": "./src/assets/images/minahasa/voc-minahasa-wreath-laying.jpg",
+    "video": "",
+    "position": [
+      -16.85,
+      2.2,
+      -8.5
+    ],
+    "size": [
+      2.1,
+      1.8
+    ],
+    "room": "Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change",
+    "chapter": "Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change",
+    "storyOrder": 25,
+    "period": "Aliansi, kekuasaan, dan ingatan / Alliance, power, and memory",
+    "themes": [
+      "minaesa",
+      "esa",
+      "tou"
+    ],
+    "formalReading": "ID: Pameran 25/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 25/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "minaesa",
+      "esa",
+      "tou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "perempuan-dan-perubahan",
+    "title": "Perempuan Minahasa dalam Arsip / Minahasan Women in the Archive",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Awal abad ke-20 / Early twentieth century",
+    "technique": "Foto arsip sosial / Social archival photograph",
+    "description": "ID: Foto perempuan Minahasa membuka pembicaraan tentang keluarga, pendidikan, pakaian, gereja, pasar, dan perubahan sosial. Istilah ina—ibu atau perempuan dalam banyak bahasa Austronesia—mengajak kita melihat sejarah dari pusat kehidupan keluarga dan komunitas.\n\nEN: Photographs of Minahasan women open discussion about family, education, clothing, church, markets, and social change. The term ina—mother or woman in many Austronesian languages—invites us to view history from the center of family and community life.\n\nIstilah Minahasa/lokal: ina, tou, Kawanua.",
+    "image": "./src/assets/images/minahasa/women-from-minahasa.jpg",
+    "video": "",
+    "position": [
+      -16.85,
+      2.2,
+      0
+    ],
+    "size": [
+      2,
+      1.7
+    ],
+    "room": "Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change",
+    "chapter": "Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change",
+    "storyOrder": 26,
+    "period": "Keluarga, pakaian, dan perubahan sosial / Family, clothing, and social change",
+    "themes": [
+      "ina",
+      "tou",
+      "Kawanua"
+    ],
+    "formalReading": "ID: Pameran 26/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 26/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "ina",
+      "tou",
+      "Kawanua",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "sam-ratulangi-muda",
+    "title": "Sam Ratulangi Muda / Young Sam Ratulangi",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "1890-1949",
+    "technique": "Potret tokoh / Historical portrait",
+    "description": "ID: Sam Ratulangi lahir di Tondano dan menjadi guru, jurnalis, politikus, serta pahlawan nasional. Perjalanannya menunjukkan bagaimana seorang tou Minahasa dapat tumou—bertumbuh—melalui pendidikan dan pelayanan publik.\n\nEN: Sam Ratulangi was born in Tondano and became a teacher, journalist, politician, and national hero. His life shows how a Minahasan person could grow through education and public service.\n\nIstilah Minahasa/lokal: tou, Tondano, tumou.",
+    "image": "./src/assets/images/minahasa/sam-ratulangi-1910.jpg",
+    "video": "",
+    "position": [
+      -16.85,
+      2.2,
+      8.5
+    ],
+    "size": [
+      2.1,
+      1.7
+    ],
+    "room": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "chapter": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "storyOrder": 27,
+    "period": "Pendidikan, ilmu, dan kepemimpinan / Education, science, and leadership",
+    "themes": [
+      "tou",
+      "Tondano",
+      "tumou"
+    ],
+    "formalReading": "ID: Pameran 27/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 27/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "tou",
+      "Tondano",
+      "tumou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Ensiklopedia Sejarah Indonesia - Sam Ratulangi",
+        "url": "https://esi.kemenbud.go.id/wiki/Sam_Ratulangi"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "sam-ratulangi-nasionalisme",
+    "title": "Sam Ratulangi dan Nasionalisme / Sam Ratulangi and Nationalism",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "1920-an hingga 1949 / 1920s to 1949",
+    "technique": "Potret politik / Political portrait",
+    "description": "ID: Ratulangi menghubungkan identitas Kawanua dengan perjuangan Indonesia. Ungkapan Si Tou Timou Tumou Tou sering dikaitkan dengannya dan dipahami sebagai ajakan agar manusia hidup untuk memanusiakan manusia lain.\n\nEN: Ratulangi connected Kawanua identity with the Indonesian struggle. The phrase Si Tou Timou Tumou Tou is strongly associated with him and is popularly understood as a call for people to help humanize others.\n\nIstilah Minahasa/lokal: Kawanua, Indonesia, Si Tou Timou Tumou Tou.",
+    "image": "./src/assets/images/minahasa/sam-ratulangi-ipphos.jpg",
+    "video": "",
+    "position": [
+      16.85,
+      2.2,
+      -8.5
+    ],
+    "size": [
+      2.2,
+      1.65
+    ],
+    "room": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "chapter": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "storyOrder": 28,
+    "period": "Dari Minahasa ke Indonesia / From Minahasa to Indonesia",
+    "themes": [
+      "Kawanua",
+      "Indonesia",
+      "Si Tou Timou Tumou Tou"
+    ],
+    "formalReading": "ID: Pameran 28/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 28/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Kawanua",
+      "Indonesia",
+      "Si Tou Timou Tumou Tou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Ensiklopedia Sejarah Indonesia - Sam Ratulangi",
+        "url": "https://esi.kemenbud.go.id/wiki/Sam_Ratulangi"
+      },
+      {
+        "label": "Tumoutou - Si Tou Timou Tumou Tou",
+        "url": "https://www.tumoutou.com/"
+      },
+      {
+        "label": "David Henley, Nationalism and Regionalism in a Colonial Context",
+        "url": "https://books.google.com/books/about/Nationalism_and_Regionalism_in_a_Colonia.html?id=Of1TEAAAQBAJ"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  },
+  {
+    "id": "minahasa-hari-ini",
+    "title": "Minahasa Hari Ini / Minahasa Today",
+    "artist": "Sejarah Minahasa / Minahasa History",
+    "year": "Masa kini / Contemporary era",
+    "technique": "Budaya hidup / Living culture",
+    "description": "ID: Minahasa hari ini hidup dalam festival, keluarga, diaspora Kawanua, media digital, dan kerja bersama Mapalus. Museum virtual ini menutup cerita dengan ajakan: Si Tou Timou Tumou Tou—hidup yang menumbuhkan manusia lain.\n\nEN: Minahasa today lives through festivals, families, Kawanua diaspora, digital media, and the collective work of Mapalus. This virtual museum closes with an invitation: Si Tou Timou Tumou Tou—a life that helps others grow.\n\nIstilah Minahasa/lokal: Kawanua, Mapalus, Si Tou Timou Tumou Tou.",
+    "image": "./src/assets/images/minahasa/kabasaran-manado-fiesta.jpg",
+    "video": "",
+    "position": [
+      16.85,
+      2.2,
+      8.5
+    ],
+    "size": [
+      1.9,
+      2.35
+    ],
+    "room": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "chapter": "Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today",
+    "storyOrder": 29,
+    "period": "Festival, diaspora, dan ingatan digital / Festival, diaspora, and digital memory",
+    "themes": [
+      "Kawanua",
+      "Mapalus",
+      "Si Tou Timou Tumou Tou"
+    ],
+    "formalReading": "ID: Pameran 29/29 dalam alur dari asal-usul menuju Minahasa modern.\nEN: Exhibit 29/29 in the storyline from origins toward modern Minahasa.",
+    "symbolicReading": "ID: Dibaca sebagai penanda hubungan antara tanah, manusia, leluhur, perubahan, dan identitas.\nEN: Read as a marker of relationships among land, people, ancestors, change, and identity.",
+    "curatorialText": "ID: Teks edukatif awal. Untuk publikasi resmi, tinjau kembali bersama peneliti, penutur bahasa, dan budayawan Minahasa.\nEN: Draft educational text. For formal publication, review with Minahasan researchers, language speakers, and cultural custodians.",
+    "emotionalTone": "reflektif, hormat, edukatif / reflective, respectful, educational",
+    "interactionHint": "ID: Dekati panel ini untuk membaca kisah dua bahasa dan istilah lokal.\nEN: Approach this panel to read the bilingual story and local terms.",
+    "visualKeywords": [
+      "Kawanua",
+      "Mapalus",
+      "Si Tou Timou Tumou Tou",
+      "Minahasa",
+      "history"
+    ],
+    "sources": [
+      {
+        "label": "Indonesia Travel - Tari Kabasaran",
+        "url": "https://www.indonesia.travel/gb/en/travel-ideas/culture/tari-kabasaran-the-warrior-dance-of-minahasa/"
+      },
+      {
+        "label": "The Existence of Mapalus in Minahasa Community",
+        "url": "https://www.ijassjournal.com/2023/V6I2/4146663159.pdf"
+      },
+      {
+        "label": "Tumoutou - Si Tou Timou Tumou Tou",
+        "url": "https://www.tumoutou.com/"
+      }
+    ],
+    "imageUseNote": "Image from the Minahasa image pack. Keep attribution from ATTRIBUTION.md when publishing.",
+    "rotation": [
+      0,
+      -1.5707963268,
+      0
+    ]
+  }
+]
