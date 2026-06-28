@@ -119,7 +119,7 @@ export class App {
     async loadArtworks() {
         const response = await fetch('./src/data/artworks.json');
         if (!response.ok) {
-            throw new Error(`No se pudo cargar artworks.json (${response.status})`);
+            throw new Error(`Tidak dapat memuat artworks.json (${response.status})`);
         }
         return response.json();
     }
@@ -135,7 +135,8 @@ export class App {
      * @returns {Promise<void>}
      */
     preloadImages(artworks) {
-        const images = artworks.map((artwork) => artwork.image).filter(Boolean);
+        const preloadLimit = this.detectMobileDevice() ? 6 : 12;
+        const images = artworks.slice(0, preloadLimit).map((artwork) => artwork.image).filter(Boolean);
         if (images.length === 0) return Promise.resolve();
 
         return new Promise((resolve) => {
@@ -153,7 +154,7 @@ export class App {
                 img.src = src;
             });
 
-            setTimeout(resolve, 2500);
+            setTimeout(resolve, this.detectMobileDevice() ? 1100 : 1800);
         });
     }
 
@@ -218,7 +219,7 @@ export class App {
         this.environment.setup();
 
         this.gallery = new Gallery(this.scene, null, this.renderer, () => this.updateShadowsIfNeeded());
-        await this.gallery.setup(this.artworksData);
+        this.gallery.setup(this.artworksData);
 
         this.artworkPanel = new ArtworkPanel({
             onDetailClosed: (detail) => this.onArtworkDetailClosed(detail)
@@ -393,8 +394,8 @@ export class App {
         this.tourCompletionModal.setAttribute('data-ui-interactive', 'true');
         this.tourCompletionModal.innerHTML = `
             <div class="tour-completion-modal__content">
-                <span>Recorrido guiado</span>
-                <h2>El recorrido ha terminado</h2>
+                <span>Tur terpandu</span>
+                <h2>Tur telah selesai</h2>
             </div>
         `;
         document.body.appendChild(this.tourCompletionModal);
@@ -478,16 +479,16 @@ export class App {
         instructions.className = 'welcome-overlay';
         instructions.setAttribute('data-ui-interactive', 'true');
         instructions.innerHTML = `
-            <div class="welcome-overlay__eyebrow">Museo virtual</div>
-            <h1>Minahasa History</h1>
-            <p class="welcome-overlay__subtitle">Explore a digital museum about the land, people, culture, and historical memory of Minahasa.</p>
-            <p>...</p>
+            <div class="welcome-overlay__eyebrow">Museum virtual</div>
+            <h1>Sejarah Minahasa</h1>
+            <p class="welcome-overlay__subtitle">Jelajahi museum digital tentang tanah, manusia, budaya, dan ingatan sejarah Minahasa.</p>
+            <p>Pilih mode kunjungan. Di desktop, gunakan W/A/S/D untuk bergerak dan mouse untuk melihat. Di ponsel, gunakan D-Pad untuk bergerak, geser layar untuk melihat sekitar, lalu tekan “Lihat” saat penanda berada di pameran.</p>
             <div class="welcome-overlay__actions">
-                <button id="start-walking" type="button" data-ui-interactive="true">Explore Museum</button>
-                <button id="start-tour" type="button" data-ui-interactive="true">Guided Tour</button>
+                <button id="start-walking" type="button" data-ui-interactive="true">Jelajahi Museum</button>
+                <button id="start-tour" type="button" data-ui-interactive="true">Tur Terpandu</button>
             </div>
             <div class="welcome-overlay__extras">
-                <button id="start-credits" type="button" data-ui-interactive="true">Credits</button>
+                <button id="start-credits" type="button" data-ui-interactive="true">Kredit</button>
             </div>
         `;
 
@@ -497,9 +498,9 @@ export class App {
             instructions.remove();
             this.startMenuActive = false;
             this.enableFreeExploration({ createMobileControls: true });
-            this.currentRoom = 'A work that allows us to reclaim the sacred';
+            this.currentRoom = this.artworksData?.[0]?.room || 'Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins';
             this.updateCurrentRoomIndicator(this.currentRoom);
-            this.showRoomNarration('A work that allows us to reclaim the sacred');
+            this.showRoomNarration(this.currentRoom);
             if (!isMobile) {
                 this.renderer.domElement.requestPointerLock();
             }
@@ -527,7 +528,7 @@ export class App {
         this.freeExplorationHud.className = 'free-exploration-hud';
         this.freeExplorationHud.setAttribute('data-ui-interactive', 'true');
         this.freeExplorationHud.innerHTML = `
-            <button class="free-exploration-hud__button" type="button" data-ui-interactive="true" aria-label="Cerrar recorrido libre">Cerrar recorrido</button>
+            <button class="free-exploration-hud__button" type="button" data-ui-interactive="true" aria-label="Tutup eksplorasi bebas">Tutup Eksplorasi</button>
         `;
         this.freeExplorationHud.querySelector('button').addEventListener('click', (event) => {
             event.stopPropagation();
@@ -583,6 +584,7 @@ export class App {
      */
     removeMobileControls() {
         document.getElementById('mobile-joystick')?.remove();
+        document.getElementById('mobile-dpad')?.remove();
         document.getElementById('mobile-look-area')?.remove();
         document.getElementById('mobile-action-button')?.remove();
         document.body.classList.remove('has-mobile-controls');
@@ -629,138 +631,134 @@ export class App {
      * the artwork currently under the crosshair.
      */
     createMobileControls() {
-        if (document.getElementById('mobile-joystick')) return;
+        if (document.getElementById('mobile-dpad')) return;
 
         document.body.classList.add('has-mobile-controls');
 
-        const joystickContainer = document.createElement('div');
-        joystickContainer.id = 'mobile-joystick';
-        joystickContainer.setAttribute('data-ui-interactive', 'true');
-        joystickContainer.innerHTML = '<div id="joystick-handle"></div>';
-        document.body.appendChild(joystickContainer);
+        const dpad = document.createElement('div');
+        dpad.id = 'mobile-dpad';
+        dpad.setAttribute('data-ui-interactive', 'true');
+        dpad.setAttribute('aria-label', 'Kontrol gerak D-Pad');
+        dpad.innerHTML = `
+            <button class="mobile-dpad__button mobile-dpad__button--up" type="button" data-dir="forward" aria-label="Maju">▲</button>
+            <button class="mobile-dpad__button mobile-dpad__button--left" type="button" data-dir="left" aria-label="Kiri">◀</button>
+            <button class="mobile-dpad__button mobile-dpad__button--right" type="button" data-dir="right" aria-label="Kanan">▶</button>
+            <button class="mobile-dpad__button mobile-dpad__button--down" type="button" data-dir="backward" aria-label="Mundur">▼</button>
+        `;
+        document.body.appendChild(dpad);
 
         const lookArea = document.createElement('div');
         lookArea.id = 'mobile-look-area';
+        lookArea.setAttribute('aria-label', 'Area sentuh untuk melihat sekitar');
         document.body.appendChild(lookArea);
 
         const actionButton = document.createElement('button');
         actionButton.id = 'mobile-action-button';
         actionButton.type = 'button';
-        actionButton.textContent = 'Ver';
+        actionButton.textContent = 'Lihat';
         actionButton.setAttribute('data-ui-interactive', 'true');
+        actionButton.setAttribute('aria-label', 'Buka pameran yang sedang diarahkan');
         document.body.appendChild(actionButton);
-        actionButton.addEventListener('click', (event) => {
+
+        const openSelectedExhibit = (event) => {
             event.preventDefault();
             event.stopPropagation();
+            event.stopImmediatePropagation?.();
             this.artworkInteraction.handleClick({
                 target: this.renderer.domElement,
                 clientX: window.innerWidth / 2,
                 clientY: window.innerHeight / 2
             });
-        });
+        };
+        actionButton.addEventListener('click', openSelectedExhibit);
 
         const crosshair = document.getElementById('crosshair');
         if (crosshair) crosshair.classList.add('active');
 
-        this.setupMobileEventListeners(joystickContainer, joystickContainer.querySelector('#joystick-handle'), lookArea);
+        this.setupMobileEventListeners(dpad, lookArea);
     }
 
     /**
-     * Registers touch handlers for movement and camera look.
+     * Registers touch/pointer handlers for D-Pad movement and drag-to-look.
      *
-     * Separate touch identifiers let the visitor move with one finger while
-     * looking around with another.
-     *
-     * @param {HTMLElement} joystick - Joystick touch surface.
-     * @param {HTMLElement} handle - Visual joystick handle.
+     * @param {HTMLElement} dpad - Directional movement pad.
      * @param {HTMLElement} lookArea - Full-screen look touch surface.
      */
-    setupMobileEventListeners(joystick, handle, lookArea) {
+    setupMobileEventListeners(dpad, lookArea) {
+        const activeDirections = new Set();
+        let lookPointerId = null;
         let touchStartX = 0;
         let touchStartY = 0;
-        let joystickActive = false;
-        let lookTouchId = null;
-        let moveTouchId = null;
 
-        joystick.addEventListener('touchstart', (event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            moveTouchId = event.touches[0].identifier;
-            joystickActive = true;
-        }, { passive: false });
+        const updateMovementFromDpad = () => {
+            this.controls.moveForward = activeDirections.has('forward');
+            this.controls.moveBackward = activeDirections.has('backward');
+            this.controls.moveLeft = activeDirections.has('left');
+            this.controls.moveRight = activeDirections.has('right');
+        };
 
-        joystick.addEventListener('touchmove', (event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            if (!joystickActive) return;
+        const releaseDirection = (button) => {
+            if (!button) return;
+            activeDirections.delete(button.dataset.dir);
+            button.classList.remove('is-pressed');
+            updateMovementFromDpad();
+        };
 
-            const touch = Array.from(event.touches).find((item) => item.identifier === moveTouchId);
-            if (!touch) return;
+        dpad.querySelectorAll('[data-dir]').forEach((button) => {
+            button.addEventListener('pointerdown', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                button.setPointerCapture?.(event.pointerId);
+                activeDirections.add(button.dataset.dir);
+                button.classList.add('is-pressed');
+                updateMovementFromDpad();
+            });
 
-            const rect = joystick.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            const deltaX = touch.clientX - centerX;
-            const deltaY = touch.clientY - centerY;
-            const maxDistance = 38;
-            const distance = Math.min(Math.hypot(deltaX, deltaY), maxDistance);
-            const angle = Math.atan2(deltaY, deltaX);
+            button.addEventListener('pointerup', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                releaseDirection(button);
+            });
 
-            handle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
+            button.addEventListener('pointercancel', () => releaseDirection(button));
+            button.addEventListener('lostpointercapture', () => releaseDirection(button));
+            button.addEventListener('contextmenu', (event) => event.preventDefault());
+        });
 
-            this.controls.moveForward = deltaY / maxDistance < -0.28;
-            this.controls.moveBackward = deltaY / maxDistance > 0.28;
-            this.controls.moveLeft = deltaX / maxDistance < -0.28;
-            this.controls.moveRight = deltaX / maxDistance > 0.28;
-        }, { passive: false });
-
-        joystick.addEventListener('touchend', (event) => {
-            event.stopPropagation();
-            const touch = Array.from(event.changedTouches).find((item) => item.identifier === moveTouchId);
-            if (!touch) return;
-
-            joystickActive = false;
-            moveTouchId = null;
-            handle.style.transform = 'translate(0, 0)';
-            this.controls.resetMovement();
-        }, { passive: false });
-
-        lookArea.addEventListener('touchstart', (event) => {
-            if (lookTouchId !== null) return;
-
-            const touch = event.touches[0];
-            const rect = joystick.getBoundingClientRect();
-            const isOverJoystick = touch.clientX >= rect.left && touch.clientX <= rect.right
-                && touch.clientY >= rect.top && touch.clientY <= rect.bottom;
-            if (isOverJoystick) return;
+        lookArea.addEventListener('pointerdown', (event) => {
+            if (lookPointerId !== null || event.pointerType === 'mouse') return;
 
             event.preventDefault();
-            lookTouchId = touch.identifier;
-            touchStartX = touch.clientX;
-            touchStartY = touch.clientY;
-        }, { passive: false });
+            lookPointerId = event.pointerId;
+            touchStartX = event.clientX;
+            touchStartY = event.clientY;
+            lookArea.setPointerCapture?.(event.pointerId);
+        });
 
-        lookArea.addEventListener('touchmove', (event) => {
-            const touch = Array.from(event.touches).find((item) => item.identifier === lookTouchId);
-            if (!touch || !this.controls.enabled) return;
+        lookArea.addEventListener('pointermove', (event) => {
+            if (event.pointerId !== lookPointerId || !this.controls.enabled) return;
 
             event.preventDefault();
-            const deltaX = touch.clientX - touchStartX;
-            const deltaY = touch.clientY - touchStartY;
+            const deltaX = event.clientX - touchStartX;
+            const deltaY = event.clientY - touchStartY;
+            const lookSensitivity = 0.0044;
 
-            this.controls.targetRotationY -= deltaX * 0.005;
-            this.controls.targetRotationX -= deltaY * 0.005;
+            this.controls.targetRotationY -= deltaX * lookSensitivity;
+            this.controls.targetRotationX -= deltaY * lookSensitivity;
             this.controls.targetRotationX = Math.max(-Math.PI / 3, Math.min(Math.PI / 3, this.controls.targetRotationX));
             this.camera.rotation.set(this.controls.targetRotationX, this.controls.targetRotationY, 0, 'YXZ');
 
-            touchStartX = touch.clientX;
-            touchStartY = touch.clientY;
-        }, { passive: false });
+            touchStartX = event.clientX;
+            touchStartY = event.clientY;
+        });
 
-        lookArea.addEventListener('touchend', (event) => {
-            const touch = Array.from(event.changedTouches).find((item) => item.identifier === lookTouchId);
-            if (touch) lookTouchId = null;
-        }, { passive: false });
+        const endLook = (event) => {
+            if (event.pointerId !== lookPointerId) return;
+            lookPointerId = null;
+            lookArea.releasePointerCapture?.(event.pointerId);
+        };
+        lookArea.addEventListener('pointerup', endLook);
+        lookArea.addEventListener('pointercancel', endLook);
     }
 
     /**
@@ -777,9 +775,9 @@ export class App {
         this.controls.setPointerLockEnabled?.(false);
         this.artworkInteraction?.setEnabled(false);
         this.tourController.start();
-        this.currentRoom = 'Una obra que nos permite recuperar lo sagrado';
+        this.currentRoom = this.artworksData?.[0]?.room || 'Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins';
         this.updateCurrentRoomIndicator(this.currentRoom);
-        this.showRoomNarration('Una obra que nos permite recuperar lo sagrado');
+        this.showRoomNarration(this.currentRoom);
     }
 
     /**
@@ -988,7 +986,7 @@ export class App {
 
         this.currentRoomIndicator.replaceChildren();
         const label = document.createElement('span');
-        label.textContent = 'Sala actual';
+        label.textContent = 'Ruang saat ini';
         const roomName = document.createElement('strong');
         roomName.textContent = room;
         this.currentRoomIndicator.append(label, roomName);

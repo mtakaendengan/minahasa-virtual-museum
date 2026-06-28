@@ -205,14 +205,14 @@ export class TourController {
         this.hud.setAttribute('data-ui-interactive', 'true');
         this.hud.innerHTML = `
             <div class="tour-hud__topbar">
-                <span>Recorrido guiado</span>
-                <button class="tour-hud__button" type="button" data-ui-interactive="true" aria-label="Salir del recorrido guiado">Salir</button>
+                <span>Tur terpandu</span>
+                <button class="tour-hud__button" type="button" data-ui-interactive="true" aria-label="Keluar dari tur terpandu">Keluar</button>
             </div>
             <div class="tour-hud__room"></div>
             <div class="tour-hud__text"></div>
             <div class="tour-hud__sheet">
                 <div>
-                    <div class="tour-hud__label">Recorrido guiado</div>
+                    <div class="tour-hud__label">Tur terpandu</div>
                     <div class="tour-hud__progress-text"></div>
                 </div>
                 <div class="tour-hud__progress" aria-hidden="true"><span></span></div>
@@ -252,13 +252,13 @@ export class TourController {
      * @param {Object} stop - Current tour stop.
      */
     updateHud(stop) {
-        const text = stop.introText || 'La camara se movera a la siguiente obra.';
+        const text = stop.introText || 'Kamera akan bergerak ke pameran berikutnya.';
         const current = this.currentIndex + 1;
         const total = this.path.length || 1;
-        const progress = `${current} de ${total}`;
+        const progress = `${current} dari ${total}`;
         this.hud.querySelector('.tour-hud__text').textContent = text;
-        this.hud.querySelector('.tour-hud__room').textContent = stop.room ? `Sala ${String(current).padStart(2, '0')} · ${stop.room}` : '';
-        this.hud.querySelector('.tour-hud__progress-text').textContent = `${progress} · ${stop.title || stop.artworkId || 'Obra'}`;
+        this.hud.querySelector('.tour-hud__room').textContent = stop.room ? `Ruang ${String(current).padStart(2, '0')} · ${stop.room}` : '';
+        this.hud.querySelector('.tour-hud__progress-text').textContent = `${progress} · ${stop.title || stop.artworkId || 'Pameran'}`;
         this.hud.querySelector('.tour-hud__progress span').style.width = `${(current / total) * 100}%`;
         this.hud.querySelector('.tour-hud__curatorial').textContent = stop.curatorialText || '';
     }

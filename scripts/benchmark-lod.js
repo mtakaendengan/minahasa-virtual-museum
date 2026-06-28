@@ -6,7 +6,7 @@
  * texture quality levels.
  */
 
-console.log('Byron Virtual Museum - Biomimetic LOD Benchmark');
+console.log('Minahasa Digital Museum - Biomimetic LOD Benchmark');
 console.log('====================================================\n');
 
 const app = window.app;

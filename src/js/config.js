@@ -1,5 +1,5 @@
 /**
- * Shared configuration for the Byron Galvez virtual museum.
+ * Shared configuration for the Minahasa Digital Museum.
  *
  * Values in this file are consumed by the app bootstrap, renderer setup,
  * camera controls, lighting, and performance-sensitive systems. Keep these

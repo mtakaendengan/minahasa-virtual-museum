@@ -314,7 +314,7 @@ export class Gallery {
 
         ctx.fillStyle = '#7b7064';
         ctx.font = '500 28px Inter, Arial, sans-serif';
-        ctx.fillText(data.technique || 'Tecnica mixta', 88, 292);
+        ctx.fillText(data.technique || 'Materi pameran', 88, 292);
 
         ctx.fillStyle = '#6b6155';
         ctx.font = '300 25px Inter, Arial, sans-serif';
@@ -445,21 +445,21 @@ export class Gallery {
     createMuseumObjects() {
         this.createLowCenterTable({
             position: [0, 0, 0],
-            title: 'Mesa de Exposicion',
-            description: 'Mesa central discreta'
+            title: 'Meja Pameran',
+            description: 'Meja pusat sederhana'
         });
 
-        this.createMuseumBench([0, 0, 4], 0, 'Banco de Contemplacion');
-        this.createMuseumBench([-6.4, 0, -5.8], Math.PI / 4, 'Banco de Contemplacion');
-        this.createMuseumBench([6.4, 0, -5.8], -Math.PI / 4, 'Banco de Contemplacion');
+        this.createMuseumBench([0, 0, 4], 0, 'Bangku Renungan');
+        this.createMuseumBench([-6.4, 0, -5.8], Math.PI / 4, 'Bangku Renungan');
+        this.createMuseumBench([6.4, 0, -5.8], -Math.PI / 4, 'Bangku Renungan');
 
         this.createPodiumWithRope({
             position: [-3, 0, 0],
-            title: 'Objeto de Coleccion'
+            title: 'Objek Koleksi'
         });
         this.createPodiumWithRope({
             position: [3, 0, 0],
-            title: 'Artefacto Historico'
+            title: 'Artefak Sejarah'
         });
 
         this.createFloatingWall({

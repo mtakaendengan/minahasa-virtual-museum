@@ -5,7 +5,7 @@
  * many artworks the optional occlusion system hides while the camera rotates.
  */
 
-console.log('Byron Virtual Museum - Occlusion Culling Benchmark');
+console.log('Minahasa Digital Museum - Occlusion Culling Benchmark');
 console.log('======================================================\n');
 
 const app = window.app;

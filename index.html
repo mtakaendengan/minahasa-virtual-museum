@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Minahasa Digital Museum: Experience the rich history and culture of Minahasa through an immersive virtual museum. Explore artifacts, artworks, and historical narratives in a 3D environment.">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,7 +45,7 @@
                             <path d="M12 2L12 22M12 2L8 6M12 2L16 6M12 22L8 18M12 22L16 18" />
                         </svg>
                     </span>
-                    <span>Mirar</span>
+                    <span>Lihat sekitar</span>
                 </div>
                 <div class="key-hints">
                     <span class="key" data-key="shift">
@@ -54,7 +54,7 @@
                             <path d="M12 5L12 19M12 5L7 10M12 5L17 10" />
                         </svg>
                     </span>
-                    <span>Correr</span>
+                    <span>Lari</span>
                 </div>
                 <div class="key-hints"
                     style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">
@@ -86,14 +86,14 @@
         <div id="loader">
             <div class="loader-content">
                 <div class="loader-spinner"></div>
-                <p>Cargando experiencia...</p>
+                <p>Memuat pengalaman...</p>
             </div>
         </div>
 
         <!-- Ambient Audio -->
 
         <audio id="ambient-audio" loop>
-            <source src="src/assets/audio/ambient_sound.mp3" type="audio/mpeg">
+            <source src="src/assets/audio/kolintang.mp3" type="audio/mpeg">
         </audio>
 
         <!-- Credits Modal -->
@@ -102,43 +102,42 @@
                 <button id="close-credits" class="close-btn" type="button" data-ui-interactive="true">&times;</button>
                 <div class="credits-body">
                     <div class="credits-header">
-                        <span class="credits-kicker">Museo Virtual Byron Gálvez</span>
-                        <h2>Créditos</h2>
+                        <span class="credits-kicker">Museum Digital Minahasa</span>
+                        <h2>Kredit</h2>
                         <p>
-                            Una experiencia digital que integra código, luz, sonido e interacción para recorrer el
-                            universo pictórico de Byron Gálvez.
+                            Pengalaman digital yang menggabungkan kode, cahaya, suara, dan interaksi untuk menjelajahi sejarah, budaya, dan ingatan Minahasa.
                         </p>
                     </div>
 
                     <section class="credits-section credits-section--developer">
-                        <img class="credits-profile" src="./src/assets/credits/jose.png" alt="José Manuel Cortés Cerón" loading="lazy">
+                        <img class="credits-profile" src="./src/assets/credits/si.png" alt="SI UNSRAT" loading="lazy">
                         <div>
-                            <h3>Museografía digital y desarrollo 3D</h3>
-                            <p class="credits-name">José Manuel Cortés Cerón</p>
-                            <p class="credits-role">ICT Engineering Student · Software &amp; AI Developer</p>
-                            <a class="credits-social" href="https://www.instagram.com/deepdevjose" target="_blank" rel="noopener noreferrer">@deepdevjose</a>
+                            <h3>Museografi digital dan pengembangan 3D</h3>
+                            <p class="credits-name">Developed and Adjusted by PKM MINAHASA FMIPA</p>
+                            <p class="credits-role">Information Systems Team - UNSRAT</p>
+                            <a class="credits-social" href="https://si.unsrat.ac.id" target="_blank" rel="noopener noreferrer">SI UNSRAT</a>
                             <p>
-                                Diseño y desarrollo de la experiencia virtual: sala 3D, navegación inmersiva,
-                                iluminación, recorrido guiado, interacción con obras, reproducción multimedia y
-                                optimización de rendimiento.
+                                Desain dan pengembangan pengalaman virtual: ruang 3D, navigasi imersif, pencahayaan, tur terpandu, interaksi dengan pameran, multimedia, dan optimasi performa.
                             </p>
                         </div>
                     </section>
 
                     <section class="credits-section">
-                        <h3>Obra artística original</h3>
-                        <p class="credits-name">Byron Gálvez</p>
-                        <p>Uso de obra con fines educativos, culturales y de difusión digital.</p>
+                        <h3>Sumber dan materi visual</h3>
+                        <p class="credits-name">Minahasa Digital Museum</p>
+                        <p>Materi visual digunakan untuk tujuan edukasi, budaya, dan penyebaran pengetahuan digital dengan atribusi sesuai sumbernya.</p>
                     </section>
 
                     <section class="credits-section">
-                        <h3>Tecnologías</h3>
-                        <p class="credits-tech-list" aria-label="Tecnologías utilizadas">Three.js · WebGL · JavaScript · HTML · CSS · Cloudinary</p>
+                        <h3>Teknologi</h3>
+                        <p class="credits-tech-list" aria-label="Teknologi yang digunakan">Three.js · WebGL · JavaScript · HTML · CSS · Cloudinary</p>
                     </section>
 
                     <p class="credits-legal">
-                        Las obras visuales presentadas fueron integradas con autorización para fines educativos,
-                        culturales y de difusión digital.
+                        Hak cipta dan kepemilikan materi visual tetap menjadi milik pemiliknya masing-masing. <br>
+                        Hak cipta dan kepemilikan kode, desain, dan pengalaman virtual ini dimiliki oleh José Manuel Cortés Cerón. <br>
+                        Museum Digital Minahasa adalah proyek kolaboratif yang dikembangkan oleh PKM MINAHASA FMIPA USR. <br>
+                        Semua hak dilindungi undang-undang. <br>
                     </p>
                 </div>
             </div>

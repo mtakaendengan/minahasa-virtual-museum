@@ -1,21 +1,17 @@
 export const ROOM_SEQUENCE = [
-    'Una obra que nos permite recuperar lo sagrado',
-    'Abstracción y figuración',
-    'Color, textura y profundidad',
-    'Mujeres, ritual y sensualidad',
-    'Luz y lo invisible',
-    'Paisaje y espacio interior',
-    'La tecnología como recurso curatorial'
+    'Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins',
+    'Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life',
+    'Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter',
+    'Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change',
+    'Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today'
 ];
 
 export const ROOM_TEXTS = {
-    'Una obra que nos permite recuperar lo sagrado': 'La visita comienza con la pintura como umbral: un lugar donde materia, color, voz y memoria recuperan lo sagrado.',
-    'Abstracción y figuración': 'Aquí, el cuerpo no desaparece dentro de la geometría. Es transformado por ella.',
-    'Color, textura y profundidad': 'El color se vuelve estructura, presión y temperatura emocional; la textura mantiene la imagen cerca de la mano.',
-    'Mujeres, ritual y sensualidad': 'La figura femenina aparece como ternura, sensualidad, ceremonia y presencia simbólica.',
-    'Luz y lo invisible': 'La luz no es decoración aquí. Revela aquello que el ojo casi no alcanza a ver.',
-    'Paisaje y espacio interior': 'El paisaje se vuelve arquitectura interior, un paso entre tierra, memoria y emoción.',
-    'La tecnología como recurso curatorial': 'El código, el audio, el movimiento y la luz se vuelven recursos interpretativos, no solo herramientas de exhibición.'
+    'Bab 1: Tanah dan Asal-Usul / Chapter 1: Land and Origins': 'Kunjungan dimulai dari tanah, danau, bahasa, dan kisah asal-usul Minahasa: tou, wanua, dan Kawanua.',
+    'Bab 2: Leluhur dan Kehidupan Harian / Chapter 2: Ancestors and Daily Life': 'Ruang ini membaca jejak leluhur, waruga, rumah, ritus, dan kehidupan harian sebagai fondasi ingatan kolektif.',
+    'Bab 3: Budaya dan Pertemuan / Chapter 3: Culture and Encounter': 'Di sini budaya hidup melalui Mapalus, Kabasaran, Maengket, dan perjumpaan antarkomunitas.',
+    'Bab 4: Kolonialisme, Perlawanan, dan Perubahan / Chapter 4: Colonialism, Resistance, and Change': 'Ruang ini menempatkan perdagangan, kolonialisme, perang, dan perubahan sosial dalam perjalanan sejarah Minahasa.',
+    'Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today': 'Bagian akhir menghubungkan pendidikan, pemikiran Sam Ratulangi, nasionalisme, diaspora, dan Minahasa masa kini.'
 };
 
 export function getRoomRank(roomName) {

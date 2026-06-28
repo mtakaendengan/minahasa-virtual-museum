@@ -118,6 +118,9 @@ export class ArtworkInteraction {
      * @returns {boolean} True when an artwork was selected.
      */
     handleClick(event) {
+        if (performance.now() < (window.__museumSuppressArtworkClickUntil || 0)) {
+            return false;
+        }
         if (!this.enabled || this.isUiClick(event)) {
             return false;
         }

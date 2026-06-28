@@ -24,7 +24,7 @@ export const TOUR_PATH = [];
 /**
  * Creates an ordered clockwise guided-tour path from artwork records.
  *
- * The Byron Galvez portrait is prioritized as the first stop when present.
+ * The first storyline exhibit is prioritized as the first stop when present.
  *
  * @param {Array<Object>} [artworksData=[]] - Artwork records from `artworks.json`.
  * @returns {Array<Object>} Tour stops with cameraPosition, lookAt, and introText.
@@ -34,15 +34,15 @@ export function createTourPathFromArtworks(artworksData = []) {
         .filter(isMainGalleryArtwork)
         .slice();
 
-    const byronArtwork = visibleArtworks.find((artwork) => artwork.id === 'byron-galvez');
-    const byronX = byronArtwork?.position?.[0] ?? 2.35;
+    const firstStoryArtwork = visibleArtworks.find((artwork) => artwork.storyOrder === 1) || visibleArtworks[0];
+    const firstStoryX = firstStoryArtwork?.position?.[0] ?? 2.35;
 
     visibleArtworks.sort((left, right) => {
-        if (left.id === 'byron-galvez') return -1;
-        if (right.id === 'byron-galvez') return 1;
+        if (left === firstStoryArtwork) return -1;
+        if (right === firstStoryArtwork) return 1;
         const roomRank = getRoomRank(left.room) - getRoomRank(right.room);
         if (roomRank !== 0) return roomRank;
-        return getClockwiseRank(left, byronX) - getClockwiseRank(right, byronX);
+        return getClockwiseRank(left, firstStoryX) - getClockwiseRank(right, firstStoryX);
     });
 
     return visibleArtworks.map((artwork, index) => {
@@ -54,9 +54,9 @@ export function createTourPathFromArtworks(artworksData = []) {
             title: artwork.title,
             cameraPosition,
             lookAt,
-            room: artwork.room || 'La tecnología como recurso curatorial',
-            introText: `${index + 1} de ${visibleArtworks.length} · ${artwork.title}`,
-            curatorialText: artwork.curatorialText || ROOM_TEXTS[artwork.room] || ROOM_TEXTS['La tecnología como recurso curatorial']
+            room: artwork.room || 'Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today',
+            introText: `${index + 1} dari ${visibleArtworks.length} · ${artwork.title}`,
+            curatorialText: artwork.curatorialText || ROOM_TEXTS[artwork.room] || ROOM_TEXTS['Bab 5: Pendidikan, Nasionalisme, dan Masa Kini / Chapter 5: Education, Nationalism, and Today']
         };
     });
 }

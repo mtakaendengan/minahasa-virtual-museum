@@ -5,7 +5,7 @@
  * renderer shadow state, renderer memory information, and a short FPS sample.
  */
 
-console.log('Byron Virtual Museum - Shadow Optimization Benchmark');
+console.log('Minahasa Digital Museum - Shadow Optimization Benchmark');
 console.log('================================================\n');
 
 const app = window.app;

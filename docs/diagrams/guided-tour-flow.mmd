@@ -1,9 +1,0 @@
-stateDiagram-v2
-    [*] --> Idle
-    Idle --> Moving: start()
-    Moving --> AwaitingDetail: camera reaches stop
-    AwaitingDetail --> Moving: detail closes and stops remain
-    AwaitingDetail --> Complete: final detail closes
-    Moving --> Idle: stop()
-    AwaitingDetail --> Idle: stop()
-    Complete --> FreeExploration: credits close

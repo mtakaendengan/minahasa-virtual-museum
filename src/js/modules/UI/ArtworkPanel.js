@@ -34,15 +34,15 @@ export class ArtworkPanel {
         this.panel.className = 'artwork-panel';
         this.panel.setAttribute('data-ui-interactive', 'true');
         this.panel.innerHTML = `
-            <button class="artwork-panel__close" type="button" aria-label="Cerrar ficha" data-ui-interactive="true">&times;</button>
-            <div class="artwork-panel__eyebrow">Ficha de obra</div>
+            <button class="artwork-panel__close" type="button" aria-label="Tutup panel pameran" data-ui-interactive="true">&times;</button>
+            <div class="artwork-panel__eyebrow">Kartu pameran</div>
             <h2 class="artwork-panel__title"></h2>
             <p class="artwork-panel__meta"></p>
             <p class="artwork-panel__technique"></p>
             <p class="artwork-panel__description"></p>
             <div class="artwork-panel__actions">
-                <button class="artwork-panel__button artwork-panel__button--primary" type="button" data-action="detail" data-ui-interactive="true">Ver detalle</button>
-                <button class="artwork-panel__button" type="button" data-action="audio" data-ui-interactive="true">Audioguía</button>
+                <button class="artwork-panel__button artwork-panel__button--primary" type="button" data-action="detail" data-ui-interactive="true">Lihat detail</button>
+                <button class="artwork-panel__button" type="button" data-action="audio" data-ui-interactive="true">Panduan audio</button>
             </div>
         `;
 
@@ -97,7 +97,7 @@ export class ArtworkPanel {
         const data = artwork.data;
         this.panel.querySelector('.artwork-panel__title').textContent = data.title;
         this.panel.querySelector('.artwork-panel__meta').textContent = `${data.artist} · ${data.year}`;
-        this.panel.querySelector('.artwork-panel__technique').textContent = data.technique || 'Técnica mixta';
+        this.panel.querySelector('.artwork-panel__technique').textContent = data.technique || 'Materi pameran';
         this.panel.querySelector('.artwork-panel__description').textContent = data.description;
         this.panel.classList.toggle('artwork-panel--tour', options.source === 'tour');
 
@@ -111,7 +111,7 @@ export class ArtworkPanel {
         const detailButton = this.panel.querySelector('[data-action="detail"]');
         const closeButton = this.panel.querySelector('.artwork-panel__close');
         audioButton.hidden = !data.audio || options.source === 'tour';
-        detailButton.textContent = 'Ver en detalle';
+        detailButton.textContent = 'Lihat detail';
         closeButton.hidden = Boolean(options.locked);
 
         this.panel.classList.add('is-visible');
@@ -167,6 +167,7 @@ export class ArtworkPanel {
         if (document.pointerLockElement) {
             document.exitPointerLock();
         }
+        window.app?.controls?.resetMovement?.();
 
         const data = artwork.data;
         const modal = document.getElementById('video-modal');
@@ -189,9 +190,9 @@ export class ArtworkPanel {
                 ${mediaMarkup}
             </div>
             <div class="artwork-detail__body">
-                <div class="artwork-detail__eyebrow">${this.escapeHtml(data.room || 'Lectura de obra')}</div>
+                <div class="artwork-detail__eyebrow">${this.escapeHtml(data.room || 'Bacaan pameran')}</div>
                 <h2>${this.escapeHtml(data.title)}</h2>
-                <p class="artwork-detail__meta">${this.escapeHtml(data.artist)} · ${this.escapeHtml(data.year)} · ${this.escapeHtml(data.technique || 'Técnica mixta')}</p>
+                <p class="artwork-detail__meta">${this.escapeHtml(data.artist)} · ${this.escapeHtml(data.year)} · ${this.escapeHtml(data.technique || 'Materi pameran')}</p>
                 ${this.createTabMarkup(data)}
             </div>
         `;
@@ -203,8 +204,9 @@ export class ArtworkPanel {
             event.stopImmediatePropagation?.();
             this.closeDetail();
         };
-        closeButton.addEventListener('pointerdown', closeDetail);
-        closeButton.addEventListener('touchstart', closeDetail, { passive: false });
+        // Use the final click/tap event only. Closing on pointerdown/touchstart can
+        // expose the canvas before the follow-up click fires, causing the exhibit
+        // to reopen immediately on mobile.
         closeButton.addEventListener('click', closeDetail);
         this.setupDetailTabs(content);
         this.setupCloseReading(content);
@@ -231,6 +233,7 @@ export class ArtworkPanel {
     closeDetail() {
         const modal = document.getElementById('video-modal');
         const wasOpen = this.detailOpen;
+        window.__museumSuppressArtworkClickUntil = performance.now() + 700;
         const closedArtwork = this.detailArtwork;
         const closedContext = this.detailContext;
 
@@ -298,8 +301,8 @@ export class ArtworkPanel {
     /**
      * Chooses the preferred detail media type for an artwork.
      *
-     * Audio takes precedence because the existing Byron record has both audio
-     * and video and should present the audio-guide card.
+     * Audio takes precedence when an exhibit has both audio and video
+     * and should present the audio-guide card.
      *
      * @param {Object} data - Artwork metadata.
      * @returns {'audio'|'video'|'image'} Detail media type.
@@ -422,9 +425,9 @@ export class ArtworkPanel {
      * @returns {string} Segmented mode control markup.
      */
     createMediaModeToggle(activeMode) {
-        const primaryLabel = activeMode === 'video' ? 'Animación' : 'Obra';
+        const primaryLabel = activeMode === 'video' ? 'Video' : 'Pameran';
         return `
-            <div class="artwork-detail__media-toggle" role="group" aria-label="Modo de visualización" data-ui-interactive="true">
+            <div class="artwork-detail__media-toggle" role="group" aria-label="Mode tampilan" data-ui-interactive="true">
                 <button
                     class="${activeMode === 'texture' ? '' : 'is-active'}"
                     type="button"
@@ -435,7 +438,7 @@ export class ArtworkPanel {
                     type="button"
                     data-action="set-media-mode"
                     data-mode="texture"
-                >Textura</button>
+                >Tekstur</button>
             </div>
         `;
     }
@@ -469,24 +472,24 @@ export class ArtworkPanel {
         const tabs = [
             {
                 id: 'artwork',
-                label: 'Obra',
+                label: 'Pameran',
                 text: data.curatorialText || data.description,
                 extra: this.createKeywordMarkup(data.visualKeywords)
             },
             {
                 id: 'formal',
-                label: 'Formal',
-                text: data.formalReading || 'Observa cómo la composición, el ritmo, el color y la tensión de la superficie organizan la imagen.'
+                label: 'Konteks',
+                text: data.formalReading || 'Perhatikan konteks sejarah, periode, lokasi, dan hubungan pameran ini dengan alur besar Minahasa.'
             },
             {
                 id: 'symbolic',
-                label: 'Simbólica',
-                text: data.symbolicReading || 'La obra abre un espacio simbólico entre cuerpo, memoria, ritual y paisaje interior.'
+                label: 'Makna',
+                text: data.symbolicReading || 'Pameran ini membuka ruang makna antara manusia, ingatan, ritus, tanah, dan identitas.'
             },
             {
                 id: 'tech',
-                label: 'Experiencia',
-                text: data.interactionHint || 'Acércate a la obra: la luz, el sonido y la distancia de la cámara forman parte de la lectura.'
+                label: 'Interaksi',
+                text: data.interactionHint || 'Dekati pameran: cahaya, suara, dan jarak kamera menjadi bagian dari pengalaman membaca sejarah.'
             }
         ];
 
@@ -604,7 +607,7 @@ export class ArtworkPanel {
             textureStage?.classList.toggle('is-active', textureActive);
             videoStage?.classList.toggle('is-active', !textureActive);
             artworkStage?.classList.toggle('is-active', !textureActive);
-            toggle.textContent = textureActive ? 'Volver a la animación' : 'Explorar textura';
+            toggle.textContent = textureActive ? 'Kembali ke video' : 'Jelajahi tekstur';
             content.querySelectorAll('video').forEach((video) => video.pause());
             requestAnimationFrame(updateZoom);
         });
@@ -684,7 +687,7 @@ export class ArtworkPanel {
     createCloseReadingControls() {
         return `
             <div class="artwork-detail__close-reading" data-ui-interactive="true">
-                <span>Explorar superficie</span>
+                <span>Jelajahi permukaan</span>
                 <input
                     type="range"
                     min="1"
@@ -692,9 +695,9 @@ export class ArtworkPanel {
                     step="0.05"
                     value="1"
                     data-action="close-reading-range"
-                    aria-label="Acercamiento a la textura de la obra"
+                    aria-label="Perbesar tekstur pameran"
                 >
-                <button type="button" data-action="close-reading-reset" data-ui-interactive="true">Restablecer vista</button>
+                <button type="button" data-action="close-reading-reset" data-ui-interactive="true">Atur ulang tampilan</button>
             </div>
         `;
     }
